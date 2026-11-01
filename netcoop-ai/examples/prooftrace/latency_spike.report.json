@@ -1,0 +1,305 @@
+{
+  "incident_id": "INC-LATENCY_SPIKE",
+  "report_version": "1.0",
+  "status": "insufficient_evidence",
+  "suspected_root_cause": "Insufficient evidence for a reliable root-cause diagnosis",
+  "root_cause_type": null,
+  "leading_hypothesis": "device_overload",
+  "confidence": 0.0,
+  "confidence_category": "low",
+  "affected_devices": [
+    "HOSTEL_CORE_SW_01"
+  ],
+  "root_cause_devices": [
+    "HOSTEL_CORE_SW_01"
+  ],
+  "downstream_affected": [],
+  "supporting_evidence": [
+    {
+      "metric": "jitter_ms",
+      "value": 53.77,
+      "device_id": "HOSTEL_CORE_SW_01",
+      "interpretation": "High jitter"
+    },
+    {
+      "metric": "latency_ms",
+      "value": 263.43,
+      "device_id": "HOSTEL_CORE_SW_01",
+      "interpretation": "High network latency"
+    },
+    {
+      "metric": "packet_loss_pct",
+      "value": 0.6,
+      "device_id": "HOSTEL_CORE_SW_01",
+      "interpretation": "Packet loss above tolerance: elevated, 20% of the way from warning onset (0.5) to alarm"
+    }
+  ],
+  "alternative_causes": [],
+  "recommended_actions": [
+    "Collect additional telemetry (interface counters, queue stats, wireless and service metrics) for the affected devices",
+    "Re-run the diagnosis once more data is available"
+  ],
+  "evidence_sources": [
+    "performance_agent"
+  ],
+  "limitations": [
+    "Evidence is not strong enough to claim a definitive root cause",
+    "Root cause requires further verification on the device",
+    "Expected signals not observed: high_cpu"
+  ],
+  "hypothesis_ranking": [
+    {
+      "hypothesis": "device_overload",
+      "score": 0.105,
+      "base_vote": 0.14,
+      "coverage": 1.0,
+      "voters": [
+        "performance"
+      ],
+      "graded_support": 0.5
+    },
+    {
+      "hypothesis": "interface_fault",
+      "score": 0.096,
+      "base_vote": 0.175,
+      "coverage": 1.0,
+      "voters": [
+        "performance"
+      ],
+      "graded_support": 0.1
+    }
+  ],
+  "conflicts_resolved": [],
+  "verification": {
+    "verified": [
+      "high_latency"
+    ],
+    "contradicted": [
+      "high_cpu"
+    ],
+    "unverifiable": []
+  },
+  "confidence_breakdown": {
+    "fused_score": 0.105,
+    "verification_factor": 0.8,
+    "ambiguity_penalty": 0.14,
+    "conflict_penalty": 0.0,
+    "data_quality_penalty": 0.0,
+    "unverifiable_penalty": 0.0,
+    "failed_agent_penalty": 0.0,
+    "consistency_penalty": 0.0,
+    "confidence_cap": 0.97
+  },
+  "secondary_findings": [],
+  "challenge_round": {
+    "triggered": true,
+    "device_id": "HOSTEL_CORE_SW_01",
+    "margin_before": 0.035,
+    "margin_after": 0.009,
+    "answers": {
+      "high_latency": {
+        "metric": "latency_ms",
+        "value": 263.43,
+        "threshold": ">= 100 ms",
+        "onset": "50 ms",
+        "state": "present",
+        "strength": 1.0
+      },
+      "packet_loss": {
+        "metric": "packet_loss_pct",
+        "value": 0.6,
+        "threshold": ">= 1 %",
+        "onset": "0.5 %",
+        "state": "elevated",
+        "strength": 0.2
+      },
+      "high_cpu": {
+        "metric": "cpu_utilization_pct",
+        "value": 53.2,
+        "threshold": ">= 90 %",
+        "onset": "70 %",
+        "state": "absent",
+        "strength": 0.0
+      },
+      "interface_errors": {
+        "metric": "interface_errors",
+        "value": 0.0,
+        "threshold": ">= 50 errors",
+        "onset": "10 errors",
+        "state": "absent",
+        "strength": 0.0
+      }
+    },
+    "winner_changed": true
+  },
+  "what_would_raise_confidence": [
+    "Explain why 'high_cpu' was not observed although expected",
+    "Distinguish device_overload from interface_fault: check high_cpu, high_latency, interface_errors, packet_loss"
+  ],
+  "decision_gates": [
+    {
+      "gate": "evidence strength",
+      "value": 0.105,
+      "need": ">= 0.65",
+      "passed": false,
+      "explanation": "fused agent score for device_overload is 0.10"
+    },
+    {
+      "gate": "verification against raw data",
+      "value": 0.5,
+      "need": "expected signals present",
+      "passed": false,
+      "explanation": "1 of 2 expected signals fully present, 1 contradicted"
+    },
+    {
+      "gate": "separation from runner-up",
+      "value": 0.009,
+      "need": ">= 0.15",
+      "passed": false,
+      "explanation": "lead over the next hypothesis is 0.01"
+    },
+    {
+      "gate": "telemetry completeness",
+      "value": 1.0,
+      "need": ">= 0.8",
+      "passed": true,
+      "explanation": "100% of core metrics present"
+    },
+    {
+      "gate": "telemetry consistency",
+      "value": 0,
+      "need": "0 flags",
+      "passed": true,
+      "explanation": "no inconsistencies on the blamed device"
+    },
+    {
+      "gate": "agent availability",
+      "value": 0,
+      "need": "0 failed",
+      "passed": true,
+      "explanation": "all agents answered"
+    }
+  ],
+  "abstention": {
+    "why_not_committed": [
+      "evidence strength: fused agent score for device_overload is 0.10 (need >= 0.65)",
+      "verification against raw data: 1 of 2 expected signals fully present, 1 contradicted (need expected signals present)",
+      "separation from runner-up: lead over the next hypothesis is 0.01 (need >= 0.15)"
+    ],
+    "leading_hypothesis": "device_overload",
+    "required_measurements": [
+      {
+        "device_id": "HOSTEL_CORE_SW_01",
+        "metric": "packet_loss_pct",
+        "signal": "packet_loss",
+        "status": "only elevated (20% of alarm level): re-sample over a longer window",
+        "decides": [
+          "interface_fault"
+        ],
+        "why": "would confirm or rule out interface_fault"
+      }
+    ],
+    "summary": "Leading hypothesis device_overload is not supported strongly enough. Most useful next measurement: packet_loss_pct on HOSTEL_CORE_SW_01."
+  },
+  "trustguard": {
+    "status": "audited",
+    "audit_message_id": "0c27b619b0cf",
+    "summary": {
+      "checked": 92,
+      "accepted": 92,
+      "flagged": 0,
+      "unverifiable": 0,
+      "votes_checked": 2,
+      "votes_flagged": 0,
+      "votes_unverifiable": 0
+    },
+    "flagged": [],
+    "unverifiable": [],
+    "agents": {
+      "performance_agent": {
+        "checked": 33,
+        "trusted": 33,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "infrastructure_agent": {
+        "checked": 42,
+        "trusted": 42,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "connectivity_agent": {
+        "checked": 17,
+        "trusted": 17,
+        "flagged": 0,
+        "unverifiable": 0
+      }
+    },
+    "before_after": {
+      "computed": false,
+      "reason": "every claim was trusted: audited findings equal the originals",
+      "before": {
+        "status": "insufficient_evidence",
+        "root_cause_type": null,
+        "leading_hypothesis": "device_overload",
+        "root_cause_devices": [
+          "HOSTEL_CORE_SW_01"
+        ],
+        "confidence": 0.0
+      },
+      "after": {
+        "status": "insufficient_evidence",
+        "root_cause_type": null,
+        "leading_hypothesis": "device_overload",
+        "root_cause_devices": [
+          "HOSTEL_CORE_SW_01"
+        ],
+        "confidence": 0.0
+      },
+      "diagnosis_changed": false,
+      "confidence_delta": 0.0,
+      "sufficient_evidence_after": false
+    }
+  },
+  "data_quality": {
+    "completeness": 1.0,
+    "records_in": 35,
+    "records_accepted": 35,
+    "records_rejected": 0,
+    "schema_versions_seen": {
+      "1.0": 35
+    },
+    "devices": 7,
+    "issues": []
+  },
+  "agent_health": {
+    "performance_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "infrastructure_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "connectivity_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "correlation_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "reporting_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "trustguard": {
+      "status": "ok",
+      "attempts": 1
+    }
+  },
+  "protocol": {
+    "version": "1.0",
+    "messages_exchanged": 32
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "incident_id": "INC-ADVERSARIAL_AGENT",
+  "report_version": "1.0",
+  "status": "diagnosed",
+  "suspected_root_cause": "Likely hardware failure on DEPT_SW_01",
+  "root_cause_type": "hardware_failure",
+  "leading_hypothesis": "hardware_failure",
+  "confidence": 0.85,
+  "confidence_category": "high",
+  "affected_devices": [
+    "DEPT_SW_01",
+    "LECTURE_AP_01"
+  ],
+  "root_cause_devices": [
+    "DEPT_SW_01"
+  ],
+  "downstream_affected": [
+    "LECTURE_AP_01"
+  ],
+  "supporting_evidence": [
+    {
+      "metric": "jitter_ms",
+      "value": 60.82,
+      "device_id": "DEPT_SW_01",
+      "interpretation": "High jitter"
+    },
+    {
+      "metric": "latency_ms",
+      "value": 433.8,
+      "device_id": "DEPT_SW_01",
+      "interpretation": "High network latency"
+    },
+    {
+      "metric": "packet_loss_pct",
+      "value": 9.27,
+      "device_id": "DEPT_SW_01",
+      "interpretation": "Packet loss above tolerance"
+    },
+    {
+      "metric": "status",
+      "value": "Critical",
+      "device_id": "DEPT_SW_01",
+      "interpretation": "Device reports Critical status"
+    },
+    {
+      "metric": "cpu_utilization_pct",
+      "value": 99.0,
+      "device_id": "DEPT_SW_01",
+      "interpretation": "Device CPU saturated"
+    },
+    {
+      "metric": "interface_errors",
+      "value": 302.0,
+      "device_id": "DEPT_SW_01",
+      "interpretation": "Elevated interface errors"
+    },
+    {
+      "metric": "queue_drops",
+      "value": 40.0,
+      "device_id": "DEPT_SW_01",
+      "interpretation": "Elevated egress queue drops: elevated, 25% of the way from warning onset (20) to alarm"
+    }
+  ],
+  "alternative_causes": [
+    "device_overload (score 0.53)",
+    "interface_fault (score 0.49)"
+  ],
+  "recommended_actions": [
+    "Check device health (fans, PSU, ASIC/line card logs) and plan a replacement",
+    "Fail over traffic to a redundant path/device if available",
+    "Raise a hardware RMA after confirming with the vendor diagnostics"
+  ],
+  "evidence_sources": [
+    "infrastructure_agent"
+  ],
+  "limitations": [
+    "Root cause requires further verification on the device",
+    "TrustGuard excluded 1 claim(s) contradicted by the telemetry (from performance_agent); see trustguard.flagged"
+  ],
+  "hypothesis_ranking": [
+    {
+      "hypothesis": "hardware_failure",
+      "score": 0.85,
+      "base_vote": 0.85,
+      "coverage": 1.0,
+      "voters": [
+        "infrastructure"
+      ]
+    },
+    {
+      "hypothesis": "device_overload",
+      "score": 0.53,
+      "base_vote": 0.656,
+      "coverage": 0.68,
+      "voters": [
+        "infrastructure",
+        "performance"
+      ]
+    },
+    {
+      "hypothesis": "interface_fault",
+      "score": 0.493,
+      "base_vote": 0.6288,
+      "coverage": 0.64,
+      "voters": [
+        "infrastructure",
+        "performance"
+      ]
+    },
+    {
+      "hypothesis": "link_congestion",
+      "score": 0.098,
+      "base_vote": 0.1375,
+      "coverage": 0.52,
+      "voters": [
+        "infrastructure"
+      ]
+    }
+  ],
+  "conflicts_resolved": [],
+  "verification": {
+    "verified": [
+      "high_cpu",
+      "interface_errors",
+      "device_critical"
+    ],
+    "contradicted": [],
+    "unverifiable": []
+  },
+  "confidence_breakdown": {
+    "fused_score": 0.85,
+    "verification_factor": 1.0,
+    "ambiguity_penalty": 0.0,
+    "conflict_penalty": 0.0,
+    "data_quality_penalty": 0.0,
+    "unverifiable_penalty": 0.0,
+    "failed_agent_penalty": 0.0,
+    "consistency_penalty": 0.0,
+    "confidence_cap": 0.97
+  },
+  "secondary_findings": [],
+  "challenge_round": null,
+  "what_would_raise_confidence": [],
+  "decision_gates": [
+    {
+      "gate": "evidence strength",
+      "value": 0.85,
+      "need": ">= 0.65",
+      "passed": true,
+      "explanation": "fused agent score for hardware_failure is 0.85"
+    },
+    {
+      "gate": "verification against raw data",
+      "value": 1.0,
+      "need": "expected signals present",
+      "passed": true,
+      "explanation": "3 of 3 expected signals fully present"
+    },
+    {
+      "gate": "separation from runner-up",
+      "value": 0.32,
+      "need": ">= 0.15",
+      "passed": true,
+      "explanation": "lead over the next hypothesis is 0.32"
+    },
+    {
+      "gate": "telemetry completeness",
+      "value": 1.0,
+      "need": ">= 0.8",
+      "passed": true,
+      "explanation": "100% of core metrics present"
+    },
+    {
+      "gate": "telemetry consistency",
+      "value": 0,
+      "need": "0 flags",
+      "passed": true,
+      "explanation": "no inconsistencies on the blamed device"
+    },
+    {
+      "gate": "agent availability",
+      "value": 0,
+      "need": "0 failed",
+      "passed": true,
+      "explanation": "all agents answered"
+    }
+  ],
+  "trustguard": {
+    "status": "audited",
+    "audit_message_id": "1ae09ceccbf4",
+    "summary": {
+      "checked": 106,
+      "accepted": 105,
+      "flagged": 1,
+      "unverifiable": 0,
+      "votes_checked": 10,
+      "votes_flagged": 1,
+      "votes_unverifiable": 0
+    },
+    "flagged": [
+      {
+        "record_id": "TG-030",
+        "agent": "performance_agent",
+        "device_id": "DEPT_SW_01",
+        "kind": "vote",
+        "subject": "link_congestion",
+        "reported": 0.99,
+        "reason_codes": [
+          "UNSUPPORTED_CERTAINTY",
+          "SELF_CONTRADICTION"
+        ],
+        "explanation": "performance_agent votes link_congestion=0.99 on DEPT_SW_01; strongest observable symptom high_jitter=1.00; cause-specific indicators high_utilization=0.00; its own report gives high_utilization=0.00"
+      }
+    ],
+    "unverifiable": [],
+    "agents": {
+      "performance_agent": {
+        "checked": 39,
+        "trusted": 38,
+        "flagged": 1,
+        "unverifiable": 0
+      },
+      "infrastructure_agent": {
+        "checked": 50,
+        "trusted": 50,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "connectivity_agent": {
+        "checked": 17,
+        "trusted": 17,
+        "flagged": 0,
+        "unverifiable": 0
+      }
+    },
+    "before_after": {
+      "computed": true,
+      "engine": "full pipeline re-run with the same agents and TrustGuard disabled",
+      "before": {
+        "status": "diagnosed",
+        "root_cause_type": "hardware_failure",
+        "leading_hypothesis": "hardware_failure",
+        "root_cause_devices": [
+          "DEPT_SW_01"
+        ],
+        "confidence": 0.8
+      },
+      "after": {
+        "status": "diagnosed",
+        "root_cause_type": "hardware_failure",
+        "leading_hypothesis": "hardware_failure",
+        "root_cause_devices": [
+          "DEPT_SW_01"
+        ],
+        "confidence": 0.85
+      },
+      "diagnosis_changed": false,
+      "confidence_delta": 0.05,
+      "sufficient_evidence_after": true
+    }
+  },
+  "data_quality": {
+    "completeness": 1.0,
+    "records_in": 35,
+    "records_accepted": 35,
+    "records_rejected": 0,
+    "schema_versions_seen": {
+      "1.0": 35
+    },
+    "devices": 7,
+    "issues": []
+  },
+  "agent_health": {
+    "performance_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "infrastructure_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "connectivity_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "correlation_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "reporting_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "trustguard": {
+      "status": "ok",
+      "attempts": 1
+    }
+  },
+  "protocol": {
+    "version": "1.0",
+    "messages_exchanged": 26
+  }
+}

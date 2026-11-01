@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root { height: 100%; }
+  body {
+    @apply bg-ink-950 text-slate-200 font-sans antialiased;
+    background-image:
+      radial-gradient(1200px 600px at -10% 110%, rgba(255, 106, 26, 0.22), transparent 60%),
+      radial-gradient(900px 500px at 110% 105%, rgba(255, 106, 26, 0.16), transparent 60%),
+      radial-gradient(800px 400px at 15% -10%, rgba(255, 106, 26, 0.10), transparent 60%);
+    background-attachment: fixed;
+  }
+  ::selection { background: rgba(255, 106, 26, 0.35); }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: #2a2f37; border-radius: 8px; }
+}
+
+@layer components {
+  .panel {
+    @apply rounded-2xl border border-white/[0.07] bg-ink-850/75 backdrop-blur-md shadow-panel;
+  }
+  .panel-inner { @apply rounded-xl border border-white/[0.06] bg-white/[0.025]; }
+  .eyebrow { @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-400; }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-medium transition
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-ember-500/60 disabled:opacity-50;
+  }
+  .btn-ember { @apply btn border border-ember-500/70 bg-ember-500/10 text-ember-300 hover:bg-ember-500/20 shadow-ember; }
+  .btn-ghost { @apply btn border border-white/10 bg-white/[0.03] text-slate-300 hover:bg-white/[0.07]; }
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-medium; }
+  .input {
+    @apply w-full rounded-lg border border-white/10 bg-ink-900 px-3 py-2 text-sm text-slate-200 outline-none
+      focus:border-ember-500/60;
+  }
+  .tbl { @apply w-full text-left text-sm; }
+  .tbl th { @apply px-3 py-2 text-[11px] font-semibold uppercase tracking-wider text-slate-400; }
+  .tbl td { @apply border-t border-white/[0.05] px-3 py-2 align-top; }
+  .mono { @apply font-mono text-[12px]; }
+}
+
+.glow-ember { filter: drop-shadow(0 0 6px rgba(255, 106, 26, 0.6)); }
+.glow-teal { filter: drop-shadow(0 0 6px rgba(52, 214, 196, 0.55)); }
+.glow-alarm { filter: drop-shadow(0 0 10px rgba(239, 59, 51, 0.75)); }

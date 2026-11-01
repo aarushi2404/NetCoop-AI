@@ -1,0 +1,107 @@
+{
+  "normal": {
+    "status": "healthy"
+  },
+  "link_congestion": {
+    "status": "diagnosed",
+    "devices": [
+      "HOSTEL_CORE_SW_01"
+    ],
+    "cause": "link congestion"
+  },
+  "weak_wifi": {
+    "status": "diagnosed",
+    "devices": [
+      "HOSTEL_AP_02"
+    ],
+    "cause": "weak Wi-Fi"
+  },
+  "interface_fault": {
+    "status": "diagnosed",
+    "devices": [
+      "DEPT_SW_01"
+    ],
+    "cause": "interface fault"
+  },
+  "dns_failure": {
+    "status": "diagnosed",
+    "devices": [
+      "HOSTEL_AP_01",
+      "HOSTEL_AP_02",
+      "HOSTEL_AP_03"
+    ],
+    "cause": "DNS"
+  },
+  "dhcp_failure": {
+    "status": "diagnosed",
+    "devices": [
+      "LECTURE_AP_01"
+    ],
+    "cause": "DHCP"
+  },
+  "hardware_failure": {
+    "status": "diagnosed",
+    "devices": [
+      "DEPT_SW_01"
+    ],
+    "cause": "hardware failure"
+  },
+  "conflicting_evidence": {
+    "status": "tentative",
+    "devices": [
+      "DEPT_SW_01"
+    ],
+    "cause": "interface fault"
+  },
+  "latency_spike": {
+    "status": "insufficient_evidence"
+  },
+  "insufficient_data": {
+    "status": "insufficient_evidence"
+  },
+  "malformed_input": {
+    "status": "diagnosed",
+    "devices": [
+      "HOSTEL_CORE_SW_01"
+    ],
+    "cause": "link congestion"
+  },
+  "incompatible_schema_v0": {
+    "status": "diagnosed",
+    "devices": [
+      "HOSTEL_CORE_SW_01"
+    ],
+    "cause": "link congestion"
+  },
+  "incompatible_schema_v2": {
+    "status": "diagnosed",
+    "devices": [
+      "HOSTEL_CORE_SW_01"
+    ],
+    "cause": "link congestion"
+  },
+  "unsupported_schema": {
+    "status": "error"
+  },
+  "multi_fault": {
+    "status": "diagnosed",
+    "devices": [
+      "HOSTEL_AP_02"
+    ],
+    "cause": "weak Wi-Fi"
+  },
+  "trend_interface_errors": {
+    "status": "diagnosed",
+    "devices": [
+      "DEPT_SW_01"
+    ],
+    "cause": "interface fault"
+  },
+  "device_overload": {
+    "status": "diagnosed",
+    "devices": [
+      "HOSTEL_CORE_SW_01"
+    ],
+    "cause": "overload"
+  }
+}

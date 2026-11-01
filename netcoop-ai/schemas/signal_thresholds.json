@@ -1,0 +1,106 @@
+{
+  "high_latency": {
+    "metric": "latency_ms",
+    "op": ">=",
+    "threshold": 100,
+    "onset": 50,
+    "unit": "ms",
+    "meaning": "High network latency"
+  },
+  "high_jitter": {
+    "metric": "jitter_ms",
+    "op": ">=",
+    "threshold": 30,
+    "onset": 15,
+    "unit": "ms",
+    "meaning": "High jitter"
+  },
+  "packet_loss": {
+    "metric": "packet_loss_pct",
+    "op": ">=",
+    "threshold": 1.0,
+    "onset": 0.5,
+    "unit": "%",
+    "meaning": "Packet loss above tolerance"
+  },
+  "high_utilization": {
+    "metric": "link_utilization_pct",
+    "op": ">=",
+    "threshold": 85,
+    "onset": 70,
+    "unit": "%",
+    "meaning": "High link utilization"
+  },
+  "queue_drops": {
+    "metric": "queue_drops",
+    "op": ">=",
+    "threshold": 100,
+    "onset": 20,
+    "unit": "packets",
+    "meaning": "Elevated egress queue drops"
+  },
+  "interface_errors": {
+    "metric": "interface_errors",
+    "op": ">=",
+    "threshold": 50,
+    "onset": 10,
+    "unit": "errors",
+    "meaning": "Elevated interface errors"
+  },
+  "link_flaps": {
+    "metric": "link_flaps",
+    "op": ">=",
+    "threshold": 3,
+    "onset": 1,
+    "unit": "flaps",
+    "meaning": "Unstable link (flapping)"
+  },
+  "high_cpu": {
+    "metric": "cpu_utilization_pct",
+    "op": ">=",
+    "threshold": 90,
+    "onset": 70,
+    "unit": "%",
+    "meaning": "Device CPU saturated"
+  },
+  "high_memory": {
+    "metric": "memory_utilization_pct",
+    "op": ">=",
+    "threshold": 90,
+    "onset": 75,
+    "unit": "%",
+    "meaning": "Device memory nearly exhausted"
+  },
+  "weak_signal": {
+    "metric": "wifi_rssi_dbm",
+    "op": "<=",
+    "threshold": -75,
+    "onset": -67,
+    "unit": "dBm",
+    "meaning": "Weak Wi-Fi signal strength"
+  },
+  "retransmissions": {
+    "metric": "retransmission_pct",
+    "op": ">=",
+    "threshold": 15,
+    "onset": 8,
+    "unit": "%",
+    "meaning": "High wireless retransmission rate"
+  },
+  "dns_failures": {
+    "metric": "dns_failure_pct",
+    "op": ">=",
+    "threshold": 20,
+    "onset": 5,
+    "unit": "%",
+    "meaning": "High DNS resolution failure rate"
+  },
+  "dhcp_failures": {
+    "metric": "dhcp_failure_pct",
+    "op": ">=",
+    "threshold": 20,
+    "onset": 5,
+    "unit": "%",
+    "meaning": "High DHCP failure rate"
+  }
+}

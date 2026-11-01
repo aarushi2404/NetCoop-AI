@@ -1,0 +1,35 @@
+{
+  "agent": "infrastructure_agent",
+  "description": "Analyses queue drops, interface errors, link flaps, CPU/memory and device status.",
+  "domain": "infrastructure",
+  "version": "1.0",
+  "protocol_versions": [
+    "1.0"
+  ],
+  "accepts": [
+    "capability_request",
+    "analyze_request",
+    "challenge_request"
+  ],
+  "produces": [
+    "capability_response",
+    "finding_batch",
+    "challenge_response"
+  ],
+  "hypotheses": [
+    "link_congestion",
+    "interface_fault",
+    "device_overload",
+    "hardware_failure"
+  ],
+  "signals": [
+    "queue_drops",
+    "interface_errors",
+    "link_flaps",
+    "high_cpu",
+    "high_memory",
+    "device_critical"
+  ],
+  "transport": "in-process",
+  "negotiation": null
+}

@@ -1,0 +1,21 @@
+{
+  "agent": "reporting_agent",
+  "description": "Builds the unified diagnostic report (JSON + Markdown).",
+  "domain": null,
+  "version": "1.0",
+  "protocol_versions": [
+    "1.0"
+  ],
+  "accepts": [
+    "capability_request",
+    "report_request"
+  ],
+  "produces": [
+    "capability_response",
+    "report"
+  ],
+  "hypotheses": [],
+  "signals": [],
+  "transport": "in-process",
+  "negotiation": null
+}

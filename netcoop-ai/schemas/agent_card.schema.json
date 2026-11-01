@@ -1,0 +1,96 @@
+{
+  "description": "Self-description an agent publishes so peers can discover what it does (capability discovery).",
+  "properties": {
+    "agent": {
+      "title": "Agent",
+      "type": "string"
+    },
+    "description": {
+      "title": "Description",
+      "type": "string"
+    },
+    "domain": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Domain"
+    },
+    "version": {
+      "default": "1.0",
+      "title": "Version",
+      "type": "string"
+    },
+    "protocol_versions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Protocol Versions",
+      "type": "array"
+    },
+    "accepts": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Accepts",
+      "type": "array"
+    },
+    "produces": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Produces",
+      "type": "array"
+    },
+    "hypotheses": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Hypotheses",
+      "type": "array"
+    },
+    "signals": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Signals",
+      "type": "array"
+    },
+    "transport": {
+      "default": "in-process",
+      "enum": [
+        "in-process",
+        "http"
+      ],
+      "title": "Transport",
+      "type": "string"
+    },
+    "negotiation": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Negotiation"
+    }
+  },
+  "required": [
+    "agent",
+    "description",
+    "protocol_versions",
+    "accepts",
+    "produces"
+  ],
+  "title": "AgentCard",
+  "type": "object"
+}

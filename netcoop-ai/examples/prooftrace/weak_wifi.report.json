@@ -1,0 +1,260 @@
+{
+  "incident_id": "INC-WEAK_WIFI",
+  "report_version": "1.0",
+  "status": "diagnosed",
+  "suspected_root_cause": "Likely weak Wi-Fi signal causing retransmissions and packet loss on HOSTEL_AP_02",
+  "root_cause_type": "weak_wifi",
+  "leading_hypothesis": "weak_wifi",
+  "confidence": 0.81,
+  "confidence_category": "high",
+  "affected_devices": [
+    "HOSTEL_AP_02"
+  ],
+  "root_cause_devices": [
+    "HOSTEL_AP_02"
+  ],
+  "downstream_affected": [],
+  "supporting_evidence": [
+    {
+      "metric": "jitter_ms",
+      "value": 45.6,
+      "device_id": "HOSTEL_AP_02",
+      "interpretation": "High jitter"
+    },
+    {
+      "metric": "latency_ms",
+      "value": 89.26,
+      "device_id": "HOSTEL_AP_02",
+      "interpretation": "High network latency: elevated, 78% of the way from warning onset (50) to alarm"
+    },
+    {
+      "metric": "packet_loss_pct",
+      "value": 3.07,
+      "device_id": "HOSTEL_AP_02",
+      "interpretation": "Packet loss above tolerance"
+    },
+    {
+      "metric": "retransmission_pct",
+      "value": 21.79,
+      "device_id": "HOSTEL_AP_02",
+      "interpretation": "High wireless retransmission rate"
+    },
+    {
+      "metric": "wifi_rssi_dbm",
+      "value": -80.27,
+      "device_id": "HOSTEL_AP_02",
+      "interpretation": "Weak Wi-Fi signal strength"
+    }
+  ],
+  "alternative_causes": [],
+  "recommended_actions": [
+    "Check AP placement, channel plan and transmit power for the affected AP",
+    "Survey RSSI and interference near affected clients",
+    "Consider adding or relocating an access point"
+  ],
+  "evidence_sources": [
+    "connectivity_agent",
+    "performance_agent"
+  ],
+  "limitations": [
+    "Root cause requires further verification on the device"
+  ],
+  "hypothesis_ranking": [
+    {
+      "hypothesis": "weak_wifi",
+      "score": 0.814,
+      "base_vote": 0.8144,
+      "coverage": 1.0,
+      "voters": [
+        "connectivity",
+        "performance"
+      ]
+    },
+    {
+      "hypothesis": "interface_fault",
+      "score": 0.131,
+      "base_vote": 0.175,
+      "coverage": 0.582,
+      "voters": [
+        "performance"
+      ]
+    },
+    {
+      "hypothesis": "device_overload",
+      "score": 0.105,
+      "base_vote": 0.14,
+      "coverage": 0.582,
+      "voters": [
+        "performance"
+      ]
+    }
+  ],
+  "conflicts_resolved": [],
+  "verification": {
+    "verified": [
+      "weak_signal",
+      "retransmissions"
+    ],
+    "contradicted": [],
+    "unverifiable": []
+  },
+  "confidence_breakdown": {
+    "fused_score": 0.814,
+    "verification_factor": 1.0,
+    "ambiguity_penalty": 0.0,
+    "conflict_penalty": 0.0,
+    "data_quality_penalty": 0.0,
+    "unverifiable_penalty": 0.0,
+    "failed_agent_penalty": 0.0,
+    "consistency_penalty": 0.0,
+    "confidence_cap": 0.97
+  },
+  "secondary_findings": [],
+  "challenge_round": null,
+  "what_would_raise_confidence": [],
+  "decision_gates": [
+    {
+      "gate": "evidence strength",
+      "value": 0.814,
+      "need": ">= 0.65",
+      "passed": true,
+      "explanation": "fused agent score for weak_wifi is 0.81"
+    },
+    {
+      "gate": "verification against raw data",
+      "value": 1.0,
+      "need": "expected signals present",
+      "passed": true,
+      "explanation": "2 of 2 expected signals fully present"
+    },
+    {
+      "gate": "separation from runner-up",
+      "value": 0.683,
+      "need": ">= 0.15",
+      "passed": true,
+      "explanation": "lead over the next hypothesis is 0.68"
+    },
+    {
+      "gate": "telemetry completeness",
+      "value": 1.0,
+      "need": ">= 0.8",
+      "passed": true,
+      "explanation": "100% of core metrics present"
+    },
+    {
+      "gate": "telemetry consistency",
+      "value": 0,
+      "need": "0 flags",
+      "passed": true,
+      "explanation": "no inconsistencies on the blamed device"
+    },
+    {
+      "gate": "agent availability",
+      "value": 0,
+      "need": "0 failed",
+      "passed": true,
+      "explanation": "all agents answered"
+    }
+  ],
+  "trustguard": {
+    "status": "audited",
+    "audit_message_id": "b9fe5e807a65",
+    "summary": {
+      "checked": 96,
+      "accepted": 96,
+      "flagged": 0,
+      "unverifiable": 0,
+      "votes_checked": 4,
+      "votes_flagged": 0,
+      "votes_unverifiable": 0
+    },
+    "flagged": [],
+    "unverifiable": [],
+    "agents": {
+      "performance_agent": {
+        "checked": 34,
+        "trusted": 34,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "infrastructure_agent": {
+        "checked": 42,
+        "trusted": 42,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "connectivity_agent": {
+        "checked": 20,
+        "trusted": 20,
+        "flagged": 0,
+        "unverifiable": 0
+      }
+    },
+    "before_after": {
+      "computed": false,
+      "reason": "every claim was trusted: audited findings equal the originals",
+      "before": {
+        "status": "diagnosed",
+        "root_cause_type": "weak_wifi",
+        "leading_hypothesis": "weak_wifi",
+        "root_cause_devices": [
+          "HOSTEL_AP_02"
+        ],
+        "confidence": 0.81
+      },
+      "after": {
+        "status": "diagnosed",
+        "root_cause_type": "weak_wifi",
+        "leading_hypothesis": "weak_wifi",
+        "root_cause_devices": [
+          "HOSTEL_AP_02"
+        ],
+        "confidence": 0.81
+      },
+      "diagnosis_changed": false,
+      "confidence_delta": 0.0,
+      "sufficient_evidence_after": true
+    }
+  },
+  "data_quality": {
+    "completeness": 1.0,
+    "records_in": 35,
+    "records_accepted": 35,
+    "records_rejected": 0,
+    "schema_versions_seen": {
+      "1.0": 35
+    },
+    "devices": 7,
+    "issues": []
+  },
+  "agent_health": {
+    "performance_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "infrastructure_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "connectivity_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "correlation_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "reporting_agent": {
+      "status": "ok",
+      "attempts": 1
+    },
+    "trustguard": {
+      "status": "ok",
+      "attempts": 1
+    }
+  },
+  "protocol": {
+    "version": "1.0",
+    "messages_exchanged": 26
+  }
+}

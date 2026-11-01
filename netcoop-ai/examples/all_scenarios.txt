@@ -1,0 +1,20 @@
+scenario                status                 conf  root cause devices                      TrustGuard     diagnosis                                                       
+----------------------  ---------------------  ----  --------------------------------------  -------------  ----------------------------------------------------------------
+normal                  healthy                0.90  -                                       0 flagged/87   No fault detected; all monitored metrics are within expected ran
+link_congestion         diagnosed              0.88  HOSTEL_CORE_SW_01                       0 flagged/112  Likely link congestion causing egress queue drops and elevated l
+weak_wifi               diagnosed              0.81  HOSTEL_AP_02                            0 flagged/96   Likely weak Wi-Fi signal causing retransmissions and packet loss
+interface_fault         diagnosed              0.78  DEPT_SW_01                              0 flagged/100  Likely Ethernet/interface fault (errors and link instability) on
+dns_failure             diagnosed              0.85  HOSTEL_AP_01,HOSTEL_AP_02,HOSTEL_AP_03  0 flagged/93   Likely DNS service failure (network path itself looks healthy) o
+dhcp_failure            diagnosed              0.85  LECTURE_AP_01                           0 flagged/89   Likely DHCP service failure (network path itself looks healthy) 
+hardware_failure        diagnosed              0.80  DEPT_SW_01                              0 flagged/105  Likely hardware failure on DEPT_SW_01                           
+device_overload         diagnosed              0.76  HOSTEL_CORE_SW_01                       0 flagged/110  Likely device CPU/memory overload on HOSTEL_CORE_SW_01          
+multi_fault             diagnosed              0.81  HOSTEL_AP_02                            0 flagged/109  Likely weak Wi-Fi signal causing retransmissions and packet loss
+trend_interface_errors  diagnosed              0.78  DEPT_SW_01                              0 flagged/94   Likely Ethernet/interface fault (errors and link instability) on
+latency_spike           insufficient_evidence  0.00  HOSTEL_CORE_SW_01                       0 flagged/92   Insufficient evidence for a reliable root-cause diagnosis       
+adversarial_agent       diagnosed              0.85  DEPT_SW_01                              1 flagged/106  Likely hardware failure on DEPT_SW_01                           
+conflicting_evidence    tentative              0.61  DEPT_SW_01                              0 flagged/95   Possible Ethernet/interface fault (errors and link instability) 
+insufficient_data       insufficient_evidence  0.00  HOSTEL_CORE_SW_01                       0 flagged/10   Insufficient evidence for a reliable root-cause diagnosis       
+malformed_input         diagnosed              0.85  HOSTEL_CORE_SW_01                       0 flagged/109  Likely link congestion causing egress queue drops and elevated l
+incompatible_schema_v0  diagnosed              0.88  HOSTEL_CORE_SW_01                       0 flagged/82   Likely link congestion causing egress queue drops and elevated l
+incompatible_schema_v2  diagnosed              0.88  HOSTEL_CORE_SW_01                       0 flagged/82   Likely link congestion causing egress queue drops and elevated l
+unsupported_schema      error                  0.00  -                                       -              No diagnosis possible: no valid telemetry records after validati

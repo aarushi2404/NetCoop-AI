@@ -1,0 +1,77 @@
+{
+  "latency_ms": {
+    "unit": "ms",
+    "min": 0,
+    "max": 600000
+  },
+  "jitter_ms": {
+    "unit": "ms",
+    "min": 0,
+    "max": 600000
+  },
+  "packet_loss_pct": {
+    "unit": "%",
+    "min": 0,
+    "max": 100
+  },
+  "throughput_mbps": {
+    "unit": "Mbps",
+    "min": 0,
+    "max": 10000000.0
+  },
+  "bandwidth_mbps": {
+    "unit": "Mbps",
+    "min": 0,
+    "max": 10000000.0
+  },
+  "link_utilization_pct": {
+    "unit": "%",
+    "min": 0,
+    "max": 100
+  },
+  "cpu_utilization_pct": {
+    "unit": "%",
+    "min": 0,
+    "max": 100
+  },
+  "memory_utilization_pct": {
+    "unit": "%",
+    "min": 0,
+    "max": 100
+  },
+  "queue_drops": {
+    "unit": "packets/interval",
+    "min": 0,
+    "max": 1000000000000.0
+  },
+  "interface_errors": {
+    "unit": "errors/interval",
+    "min": 0,
+    "max": 1000000000000.0
+  },
+  "link_flaps": {
+    "unit": "count/interval",
+    "min": 0,
+    "max": 1000000000.0
+  },
+  "wifi_rssi_dbm": {
+    "unit": "dBm",
+    "min": -120,
+    "max": 0
+  },
+  "retransmission_pct": {
+    "unit": "%",
+    "min": 0,
+    "max": 100
+  },
+  "dns_failure_pct": {
+    "unit": "%",
+    "min": 0,
+    "max": 100
+  },
+  "dhcp_failure_pct": {
+    "unit": "%",
+    "min": 0,
+    "max": 100
+  }
+}

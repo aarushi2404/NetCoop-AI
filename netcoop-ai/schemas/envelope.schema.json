@@ -1,0 +1,72 @@
+{
+  "properties": {
+    "protocol": {
+      "const": "netcoop",
+      "default": "netcoop",
+      "title": "Protocol",
+      "type": "string"
+    },
+    "schema_version": {
+      "default": "1.0",
+      "title": "Schema Version",
+      "type": "string"
+    },
+    "message_id": {
+      "title": "Message Id",
+      "type": "string"
+    },
+    "correlation_id": {
+      "title": "Correlation Id",
+      "type": "string"
+    },
+    "sender": {
+      "minLength": 1,
+      "title": "Sender",
+      "type": "string"
+    },
+    "recipient": {
+      "minLength": 1,
+      "title": "Recipient",
+      "type": "string"
+    },
+    "msg_type": {
+      "enum": [
+        "capability_request",
+        "capability_response",
+        "analyze_request",
+        "finding_batch",
+        "challenge_request",
+        "challenge_response",
+        "correlate_request",
+        "diagnosis",
+        "verify_request",
+        "verification_result",
+        "report_request",
+        "report",
+        "audit_request",
+        "audit_result",
+        "error"
+      ],
+      "title": "Msg Type",
+      "type": "string"
+    },
+    "timestamp": {
+      "title": "Timestamp",
+      "type": "string"
+    },
+    "payload": {
+      "additionalProperties": true,
+      "title": "Payload",
+      "type": "object"
+    }
+  },
+  "required": [
+    "message_id",
+    "correlation_id",
+    "sender",
+    "recipient",
+    "msg_type"
+  ],
+  "title": "Envelope",
+  "type": "object"
+}

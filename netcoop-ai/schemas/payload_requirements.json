@@ -1,0 +1,62 @@
+{
+  "protocol_version": "1.0",
+  "required_payload_fields": {
+    "capability_request": [],
+    "capability_response": [
+      "agent",
+      "protocol_versions",
+      "accepts",
+      "produces"
+    ],
+    "analyze_request": [
+      "devices"
+    ],
+    "finding_batch": [
+      "agent",
+      "domain",
+      "findings"
+    ],
+    "challenge_request": [
+      "device_id",
+      "signals",
+      "devices"
+    ],
+    "challenge_response": [
+      "agent",
+      "answers"
+    ],
+    "correlate_request": [
+      "devices",
+      "batches"
+    ],
+    "diagnosis": [
+      "status"
+    ],
+    "verify_request": [
+      "diagnosis",
+      "devices"
+    ],
+    "verification_result": [
+      "status",
+      "confidence"
+    ],
+    "report_request": [
+      "meta"
+    ],
+    "report": [
+      "status",
+      "suspected_root_cause"
+    ],
+    "audit_request": [
+      "devices",
+      "batches"
+    ],
+    "audit_result": [
+      "audit",
+      "audited_batches"
+    ],
+    "error": [
+      "error"
+    ]
+  }
+}

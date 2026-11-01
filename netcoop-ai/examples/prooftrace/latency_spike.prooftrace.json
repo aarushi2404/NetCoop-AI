@@ -1,0 +1,5041 @@
+{
+  "trace_version": "1.0",
+  "incident_id": "INC-LATENCY_SPIKE",
+  "conclusion": {
+    "status": "insufficient_evidence",
+    "hypothesis": "device_overload",
+    "root_cause_type": null,
+    "root_cause_devices": [
+      "HOSTEL_CORE_SW_01"
+    ],
+    "confidence": 0.0,
+    "summary": "Insufficient evidence for a reliable root-cause diagnosis"
+  },
+  "integrity": {
+    "message_count": 32,
+    "chain_sha256": "4a9a2ef7d88c73e68254a47a170ec8d4e388659e8677ff2dc5d1d52caab2627c",
+    "messages": [
+      {
+        "i": 0,
+        "message_id": "20d10bbebef9",
+        "msg_type": "capability_request",
+        "sender": "orchestrator",
+        "recipient": "performance_agent",
+        "sha256": "302d2a28cb14444da8a4cabc88462a51fdf1e3b9d7b6201faa4fffffac1311e8"
+      },
+      {
+        "i": 1,
+        "message_id": "68ddc64fd24f",
+        "msg_type": "capability_response",
+        "sender": "performance_agent",
+        "recipient": "orchestrator",
+        "sha256": "b75bad0593be2355900a83558921653351cbbe5b81af01117cefe66e4852266f"
+      },
+      {
+        "i": 2,
+        "message_id": "bd4736847732",
+        "msg_type": "capability_request",
+        "sender": "orchestrator",
+        "recipient": "infrastructure_agent",
+        "sha256": "277b55106182a783c8ff472c32b41951e5e51e2e8eef19934ca0aad54ea5c6f0"
+      },
+      {
+        "i": 3,
+        "message_id": "8657c26588bb",
+        "msg_type": "capability_response",
+        "sender": "infrastructure_agent",
+        "recipient": "orchestrator",
+        "sha256": "2597543934537ea9b7f22e28784289a829751b49a059226ea3238e665960d48c"
+      },
+      {
+        "i": 4,
+        "message_id": "cdba36839a27",
+        "msg_type": "capability_request",
+        "sender": "orchestrator",
+        "recipient": "connectivity_agent",
+        "sha256": "9b64f4f122241411ec07f63fc2107151a099acd88706d57b63fc44e264d9e369"
+      },
+      {
+        "i": 5,
+        "message_id": "18e7f088e847",
+        "msg_type": "capability_response",
+        "sender": "connectivity_agent",
+        "recipient": "orchestrator",
+        "sha256": "0b11edc75a4a802b7a8d53234a379afa428e6573e85c8ab365995b5f81ed5c61"
+      },
+      {
+        "i": 6,
+        "message_id": "e6fe750048bf",
+        "msg_type": "capability_request",
+        "sender": "orchestrator",
+        "recipient": "correlation_agent",
+        "sha256": "58ee6b8ed4c792cade7c6586a7ee072f0836e7235e29a60253f0d295e453be91"
+      },
+      {
+        "i": 7,
+        "message_id": "0d5af72a7c50",
+        "msg_type": "capability_response",
+        "sender": "correlation_agent",
+        "recipient": "orchestrator",
+        "sha256": "4d201b6e07ed2e3580e51e4eeff252e5bc36e1f44494d570c6c08c52ed606567"
+      },
+      {
+        "i": 8,
+        "message_id": "a62cbe9da27a",
+        "msg_type": "capability_request",
+        "sender": "orchestrator",
+        "recipient": "reporting_agent",
+        "sha256": "0b3726a642af1fb019caab88b417a882feec3d299ce49b34c1bd35713aeafbfc"
+      },
+      {
+        "i": 9,
+        "message_id": "d53028f3838d",
+        "msg_type": "capability_response",
+        "sender": "reporting_agent",
+        "recipient": "orchestrator",
+        "sha256": "967ced26d0a86e4306e2bd1d844e03e27298c3f65c84139b11242a9c197f7ac5"
+      },
+      {
+        "i": 10,
+        "message_id": "6c7eeb5bd265",
+        "msg_type": "capability_request",
+        "sender": "orchestrator",
+        "recipient": "trustguard",
+        "sha256": "d434d94dbd392877f932bc214ae4ea4edd677f7f7e81979d2e32fd47746809f9"
+      },
+      {
+        "i": 11,
+        "message_id": "417da584ce91",
+        "msg_type": "capability_response",
+        "sender": "trustguard",
+        "recipient": "orchestrator",
+        "sha256": "af6f7aff0a1262988082779f6f977af9a20935af0512a8ba5e4b804bc8c54759"
+      },
+      {
+        "i": 12,
+        "message_id": "19bc4d799bed",
+        "msg_type": "analyze_request",
+        "sender": "orchestrator",
+        "recipient": "performance_agent",
+        "sha256": "8fea9d7a5886c2a5c774bf4048c62ddc380da741076be5d1a4cc235f390b9a3d"
+      },
+      {
+        "i": 13,
+        "message_id": "1439948e6c6e",
+        "msg_type": "finding_batch",
+        "sender": "performance_agent",
+        "recipient": "orchestrator",
+        "sha256": "37e669a72b7e69f119b8d214fc05ab199e1ad89fe1bb3b77abd296d5b97658ed"
+      },
+      {
+        "i": 14,
+        "message_id": "09903ea39d1d",
+        "msg_type": "analyze_request",
+        "sender": "orchestrator",
+        "recipient": "infrastructure_agent",
+        "sha256": "d06d5d605222d60dd2fb56ea1227247f9ce8ea4a1309ac19e928065bf34b83d8"
+      },
+      {
+        "i": 15,
+        "message_id": "952ef5e70594",
+        "msg_type": "finding_batch",
+        "sender": "infrastructure_agent",
+        "recipient": "orchestrator",
+        "sha256": "a2f955f9ceef874dd99f03cb9976caaf2723765d95df4a851e275eab24fab486"
+      },
+      {
+        "i": 16,
+        "message_id": "9ee2c915feb9",
+        "msg_type": "analyze_request",
+        "sender": "orchestrator",
+        "recipient": "connectivity_agent",
+        "sha256": "7e4f8cdaa2a23e1fde69fd623997e853daca075c48bdb5a95498d60cecde994b"
+      },
+      {
+        "i": 17,
+        "message_id": "c12928dbe2c3",
+        "msg_type": "finding_batch",
+        "sender": "connectivity_agent",
+        "recipient": "orchestrator",
+        "sha256": "abb8f72fd829423700ce394fc6845b6054942ac418b6b71105bbb33dfbbd65e9"
+      },
+      {
+        "i": 18,
+        "message_id": "607164e129fe",
+        "msg_type": "audit_request",
+        "sender": "orchestrator",
+        "recipient": "trustguard",
+        "sha256": "f72897506eff648b25ec61b973579d622fb8f79f667e6d2249256e8cc52428d8"
+      },
+      {
+        "i": 19,
+        "message_id": "0c27b619b0cf",
+        "msg_type": "audit_result",
+        "sender": "trustguard",
+        "recipient": "orchestrator",
+        "sha256": "a7925ee04c63e6b57fa93e3a1c228205ff864ea375974fa00cc54698d0314644"
+      },
+      {
+        "i": 20,
+        "message_id": "b2fde7d2ff5b",
+        "msg_type": "correlate_request",
+        "sender": "orchestrator",
+        "recipient": "correlation_agent",
+        "sha256": "24a6d3388e4ed6dd8dfbeaf19f4afd2fe344bfc7af4ea2432800d9c0e568803b"
+      },
+      {
+        "i": 21,
+        "message_id": "659e49216eb8",
+        "msg_type": "diagnosis",
+        "sender": "correlation_agent",
+        "recipient": "orchestrator",
+        "sha256": "878569540d6567a1572c84de0837e0d676dc1ec7735b9e18b5eb27eb12b1187c"
+      },
+      {
+        "i": 22,
+        "message_id": "b18ff9bf3778",
+        "msg_type": "challenge_request",
+        "sender": "orchestrator",
+        "recipient": "performance_agent",
+        "sha256": "838e156ce33a70db982ae4f124814fb047da145aa28cb7596e15b0ec213ae1bf"
+      },
+      {
+        "i": 23,
+        "message_id": "92f80865d004",
+        "msg_type": "challenge_response",
+        "sender": "performance_agent",
+        "recipient": "orchestrator",
+        "sha256": "f6bca5e851f1b533b54e023b60874fc4282e76c2898039811bd57fb695a629dd"
+      },
+      {
+        "i": 24,
+        "message_id": "667a101d8b96",
+        "msg_type": "challenge_request",
+        "sender": "orchestrator",
+        "recipient": "infrastructure_agent",
+        "sha256": "c73198a589b731e64b22b81bec8059bf67f8cb6839bc0d50759632582f2d5814"
+      },
+      {
+        "i": 25,
+        "message_id": "32201fe88489",
+        "msg_type": "challenge_response",
+        "sender": "infrastructure_agent",
+        "recipient": "orchestrator",
+        "sha256": "8480803069ded24a6fdcd8cd584ac639e3c3cbe5695b5ca0d4efc4851219dfd7"
+      },
+      {
+        "i": 26,
+        "message_id": "847bcd815f7d",
+        "msg_type": "correlate_request",
+        "sender": "orchestrator",
+        "recipient": "correlation_agent",
+        "sha256": "93e9c758614e40d423f8470e85c6b8c84ea36be98c77542680ff025e14c80912"
+      },
+      {
+        "i": 27,
+        "message_id": "8ef25d023d11",
+        "msg_type": "diagnosis",
+        "sender": "correlation_agent",
+        "recipient": "orchestrator",
+        "sha256": "e85dbab68ce51ebae9c75afeb0ba35264b7e40c84ad5bac28d4bf168aecbe05e"
+      },
+      {
+        "i": 28,
+        "message_id": "53866e543449",
+        "msg_type": "verify_request",
+        "sender": "orchestrator",
+        "recipient": "correlation_agent",
+        "sha256": "ae64e40e4eee7c2f21922e247c5bbd3985ebd2e31df10f0caf2995ac3b1fcfa1"
+      },
+      {
+        "i": 29,
+        "message_id": "816f2e17e92e",
+        "msg_type": "verification_result",
+        "sender": "correlation_agent",
+        "recipient": "orchestrator",
+        "sha256": "abb6fbd440cecc9f8cd2257031351aaf72f2eb2e8f3b5f1ec9b90a8728f64224"
+      },
+      {
+        "i": 30,
+        "message_id": "3e9aedfe2963",
+        "msg_type": "report_request",
+        "sender": "orchestrator",
+        "recipient": "reporting_agent",
+        "sha256": "dbda9aa12364db8c0ad577a1076b9632816edd0eff2718d338eb3313b469dac5"
+      },
+      {
+        "i": 31,
+        "message_id": "809497fcaf13",
+        "msg_type": "report",
+        "sender": "reporting_agent",
+        "recipient": "orchestrator",
+        "sha256": "5e434b6372d266c8032903ffb6a412fb822bc2646f1bdd82509a29db968df066"
+      }
+    ]
+  },
+  "data_quality": {
+    "completeness": 1.0,
+    "stale_devices": [],
+    "quality_flags": {},
+    "records_rejected": 0
+  },
+  "trustguard": {
+    "audit_message_id": "0c27b619b0cf",
+    "request_message_id": "607164e129fe",
+    "audit_version": "1.0",
+    "summary": {
+      "checked": 92,
+      "accepted": 92,
+      "flagged": 0,
+      "unverifiable": 0,
+      "votes_checked": 2,
+      "votes_flagged": 0,
+      "votes_unverifiable": 0
+    },
+    "agents": {
+      "performance_agent": {
+        "checked": 33,
+        "trusted": 33,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "infrastructure_agent": {
+        "checked": 42,
+        "trusted": 42,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "connectivity_agent": {
+        "checked": 17,
+        "trusted": 17,
+        "flagged": 0,
+        "unverifiable": 0
+      }
+    },
+    "parameters": {
+      "strength_tolerance": 0.05,
+      "ceiling_tolerance": 0.1,
+      "specific_vote": 0.5,
+      "specific_strength": 0.5,
+      "unverifiable_cap": 0.25
+    },
+    "before_after": {
+      "computed": false,
+      "reason": "every claim was trusted: audited findings equal the originals",
+      "before": {
+        "status": "insufficient_evidence",
+        "root_cause_type": null,
+        "leading_hypothesis": "device_overload",
+        "root_cause_devices": [
+          "HOSTEL_CORE_SW_01"
+        ],
+        "confidence": 0.0
+      },
+      "after": {
+        "status": "insufficient_evidence",
+        "root_cause_type": null,
+        "leading_hypothesis": "device_overload",
+        "root_cause_devices": [
+          "HOSTEL_CORE_SW_01"
+        ],
+        "confidence": 0.0
+      },
+      "diagnosis_changed": false,
+      "confidence_delta": 0.0,
+      "sufficient_evidence_after": false
+    },
+    "records": [
+      {
+        "record_id": "TG-001",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "performance_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_jitter",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_jitter=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_jitter",
+            "metric": "jitter_ms",
+            "value": 1.96,
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e6b993b70ed1f84c48920efddaede16bb90f18b8f3222e41d8f79b428f59027",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-002",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "performance_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_latency",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_latency=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_latency",
+            "metric": "latency_ms",
+            "value": 12.13,
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e6b993b70ed1f84c48920efddaede16bb90f18b8f3222e41d8f79b428f59027",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-003",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "performance_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_utilization",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_utilization=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_utilization",
+            "metric": "link_utilization_pct",
+            "value": 33.78,
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e6b993b70ed1f84c48920efddaede16bb90f18b8f3222e41d8f79b428f59027",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-004",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "performance_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "1439948e6c6e",
+        "subject": "packet_loss",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports packet_loss=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "packet_loss",
+            "metric": "packet_loss_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e6b993b70ed1f84c48920efddaede16bb90f18b8f3222e41d8f79b428f59027",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-005",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_jitter",
+        "reported": 1.0,
+        "expected": {
+          "strength": 1.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_jitter=1.00; recomputed from telemetry: 1.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_jitter",
+            "metric": "jitter_ms",
+            "value": 53.77,
+            "strength": 1.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "0b86e930a9a9048a491e238124bf475d5946a765a84bdb2e02e7427b3c37332d",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-006",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_latency",
+        "reported": 1.0,
+        "expected": {
+          "strength": 1.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_latency=1.00; recomputed from telemetry: 1.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_latency",
+            "metric": "latency_ms",
+            "value": 263.43,
+            "strength": 1.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "0b86e930a9a9048a491e238124bf475d5946a765a84bdb2e02e7427b3c37332d",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-007",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_utilization",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_utilization=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_utilization",
+            "metric": "link_utilization_pct",
+            "value": 68.89,
+            "strength": 0.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "0b86e930a9a9048a491e238124bf475d5946a765a84bdb2e02e7427b3c37332d",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-008",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "packet_loss",
+        "reported": 0.2,
+        "expected": {
+          "strength": 0.2
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports packet_loss=0.20; recomputed from telemetry: 0.20",
+        "telemetry_refs": [
+          {
+            "signal": "packet_loss",
+            "metric": "packet_loss_pct",
+            "value": 0.6,
+            "strength": 0.2,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "0b86e930a9a9048a491e238124bf475d5946a765a84bdb2e02e7427b3c37332d",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-009",
+        "kind": "evidence",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "jitter_ms#0",
+        "reported": 53.77,
+        "expected": {
+          "value": 53.77
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent cites jitter_ms=53.77 on HOSTEL_CORE_SW_01; telemetry has 53.77",
+        "telemetry_refs": [
+          {
+            "metric": "jitter_ms",
+            "value": 53.77,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "0b86e930a9a9048a491e238124bf475d5946a765a84bdb2e02e7427b3c37332d",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-010",
+        "kind": "evidence",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "latency_ms#1",
+        "reported": 263.43,
+        "expected": {
+          "value": 263.43
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent cites latency_ms=263.43 on HOSTEL_CORE_SW_01; telemetry has 263.43",
+        "telemetry_refs": [
+          {
+            "metric": "latency_ms",
+            "value": 263.43,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "0b86e930a9a9048a491e238124bf475d5946a765a84bdb2e02e7427b3c37332d",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-011",
+        "kind": "evidence",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "packet_loss_pct#2",
+        "reported": 0.6,
+        "expected": {
+          "value": 0.6
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent cites packet_loss_pct=0.6 on HOSTEL_CORE_SW_01; telemetry has 0.6",
+        "telemetry_refs": [
+          {
+            "metric": "packet_loss_pct",
+            "value": 0.6,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "0b86e930a9a9048a491e238124bf475d5946a765a84bdb2e02e7427b3c37332d",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-012",
+        "kind": "vote",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "device_overload",
+        "reported": 0.2,
+        "expected": {
+          "ceiling": 1.0,
+          "specific_support": null,
+          "ceiling_tolerance": 0.1,
+          "authority": false
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent votes device_overload=0.20 on HOSTEL_CORE_SW_01; strongest observable symptom high_jitter=1.00; supported",
+        "telemetry_refs": [
+          {
+            "signal": "high_jitter",
+            "metric": "jitter_ms",
+            "value": 53.77,
+            "strength": 1.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "signal": "high_latency",
+            "metric": "latency_ms",
+            "value": 263.43,
+            "strength": 1.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "signal": "packet_loss",
+            "metric": "packet_loss_pct",
+            "value": 0.6,
+            "strength": 0.2,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "0b86e930a9a9048a491e238124bf475d5946a765a84bdb2e02e7427b3c37332d",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-013",
+        "kind": "vote",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "interface_fault",
+        "reported": 0.25,
+        "expected": {
+          "ceiling": 1.0,
+          "specific_support": null,
+          "ceiling_tolerance": 0.1,
+          "authority": false
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent votes interface_fault=0.25 on HOSTEL_CORE_SW_01; strongest observable symptom high_jitter=1.00; supported",
+        "telemetry_refs": [
+          {
+            "signal": "high_jitter",
+            "metric": "jitter_ms",
+            "value": 53.77,
+            "strength": 1.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "signal": "high_latency",
+            "metric": "latency_ms",
+            "value": 263.43,
+            "strength": 1.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "signal": "packet_loss",
+            "metric": "packet_loss_pct",
+            "value": 0.6,
+            "strength": 0.2,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "0b86e930a9a9048a491e238124bf475d5946a765a84bdb2e02e7427b3c37332d",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-014",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "performance_agent:HOSTEL_AP_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_jitter",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_jitter=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_jitter",
+            "metric": "jitter_ms",
+            "value": 2.02,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "6da3f2d6dd0cef9e4007d2b1d1cfdd96ec1418afaeb4aa6a4eaf6eb28351a4a5",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-015",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "performance_agent:HOSTEL_AP_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_latency",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_latency=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_latency",
+            "metric": "latency_ms",
+            "value": 12.07,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "6da3f2d6dd0cef9e4007d2b1d1cfdd96ec1418afaeb4aa6a4eaf6eb28351a4a5",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-016",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "performance_agent:HOSTEL_AP_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_utilization",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_utilization=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_utilization",
+            "metric": "link_utilization_pct",
+            "value": 30.08,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "6da3f2d6dd0cef9e4007d2b1d1cfdd96ec1418afaeb4aa6a4eaf6eb28351a4a5",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-017",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "performance_agent:HOSTEL_AP_01",
+        "message_id": "1439948e6c6e",
+        "subject": "packet_loss",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports packet_loss=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "packet_loss",
+            "metric": "packet_loss_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "6da3f2d6dd0cef9e4007d2b1d1cfdd96ec1418afaeb4aa6a4eaf6eb28351a4a5",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-018",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "performance_agent:HOSTEL_AP_02",
+        "message_id": "1439948e6c6e",
+        "subject": "high_jitter",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_jitter=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_jitter",
+            "metric": "jitter_ms",
+            "value": 1.99,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "41009e2774a9df8edffe9794da05137bb5c39f689746bbdc0f7840138a37aa13",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-019",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "performance_agent:HOSTEL_AP_02",
+        "message_id": "1439948e6c6e",
+        "subject": "high_latency",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_latency=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_latency",
+            "metric": "latency_ms",
+            "value": 11.68,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "41009e2774a9df8edffe9794da05137bb5c39f689746bbdc0f7840138a37aa13",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-020",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "performance_agent:HOSTEL_AP_02",
+        "message_id": "1439948e6c6e",
+        "subject": "high_utilization",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_utilization=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_utilization",
+            "metric": "link_utilization_pct",
+            "value": 30.6,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "41009e2774a9df8edffe9794da05137bb5c39f689746bbdc0f7840138a37aa13",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-021",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "performance_agent:HOSTEL_AP_02",
+        "message_id": "1439948e6c6e",
+        "subject": "packet_loss",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports packet_loss=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "packet_loss",
+            "metric": "packet_loss_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "41009e2774a9df8edffe9794da05137bb5c39f689746bbdc0f7840138a37aa13",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-022",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "performance_agent:HOSTEL_AP_03",
+        "message_id": "1439948e6c6e",
+        "subject": "high_jitter",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_jitter=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_jitter",
+            "metric": "jitter_ms",
+            "value": 2.0,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "0744465ffaa080a9ec513813ad1f322db8ad6eda5587b92abf0012e801e522ec",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-023",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "performance_agent:HOSTEL_AP_03",
+        "message_id": "1439948e6c6e",
+        "subject": "high_latency",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_latency=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_latency",
+            "metric": "latency_ms",
+            "value": 11.72,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "0744465ffaa080a9ec513813ad1f322db8ad6eda5587b92abf0012e801e522ec",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-024",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "performance_agent:HOSTEL_AP_03",
+        "message_id": "1439948e6c6e",
+        "subject": "high_utilization",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_utilization=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_utilization",
+            "metric": "link_utilization_pct",
+            "value": 30.31,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "0744465ffaa080a9ec513813ad1f322db8ad6eda5587b92abf0012e801e522ec",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-025",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "performance_agent:HOSTEL_AP_03",
+        "message_id": "1439948e6c6e",
+        "subject": "packet_loss",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports packet_loss=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "packet_loss",
+            "metric": "packet_loss_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "0744465ffaa080a9ec513813ad1f322db8ad6eda5587b92abf0012e801e522ec",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-026",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "performance_agent:DEPT_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_jitter",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_jitter=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_jitter",
+            "metric": "jitter_ms",
+            "value": 2.05,
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "cda22c36675e77977900530f785d9022f2f9b9bbba532575709145581ebf00ca",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-027",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "performance_agent:DEPT_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_latency",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_latency=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_latency",
+            "metric": "latency_ms",
+            "value": 12.09,
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "cda22c36675e77977900530f785d9022f2f9b9bbba532575709145581ebf00ca",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-028",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "performance_agent:DEPT_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_utilization",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_utilization=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_utilization",
+            "metric": "link_utilization_pct",
+            "value": 34.18,
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "cda22c36675e77977900530f785d9022f2f9b9bbba532575709145581ebf00ca",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-029",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "performance_agent:DEPT_SW_01",
+        "message_id": "1439948e6c6e",
+        "subject": "packet_loss",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports packet_loss=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "packet_loss",
+            "metric": "packet_loss_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "cda22c36675e77977900530f785d9022f2f9b9bbba532575709145581ebf00ca",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-030",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "performance_agent:LECTURE_AP_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_jitter",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_jitter=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_jitter",
+            "metric": "jitter_ms",
+            "value": 1.96,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "289287d329c3bc178b2e1874c31e2876bd925394382bb1d5f15f4407ac1568e9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-031",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "performance_agent:LECTURE_AP_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_latency",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_latency=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_latency",
+            "metric": "latency_ms",
+            "value": 11.63,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "289287d329c3bc178b2e1874c31e2876bd925394382bb1d5f15f4407ac1568e9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-032",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "performance_agent:LECTURE_AP_01",
+        "message_id": "1439948e6c6e",
+        "subject": "high_utilization",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports high_utilization=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_utilization",
+            "metric": "link_utilization_pct",
+            "value": 29.67,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "289287d329c3bc178b2e1874c31e2876bd925394382bb1d5f15f4407ac1568e9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-033",
+        "kind": "signal",
+        "agent": "performance_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "performance_agent:LECTURE_AP_01",
+        "message_id": "1439948e6c6e",
+        "subject": "packet_loss",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "performance_agent reports packet_loss=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "packet_loss",
+            "metric": "packet_loss_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "289287d329c3bc178b2e1874c31e2876bd925394382bb1d5f15f4407ac1568e9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-034",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "infrastructure_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "952ef5e70594",
+        "subject": "device_critical",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports device_critical=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "device_critical",
+            "metric": "status",
+            "value": "Healthy",
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e77311a6a7d5a5ff716d984f7709554a53182969103472a4a17aa124809b813",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-035",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "infrastructure_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_cpu",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_cpu=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_cpu",
+            "metric": "cpu_utilization_pct",
+            "value": 21.44,
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e77311a6a7d5a5ff716d984f7709554a53182969103472a4a17aa124809b813",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-036",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "infrastructure_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_memory",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_memory=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_memory",
+            "metric": "memory_utilization_pct",
+            "value": 39.89,
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e77311a6a7d5a5ff716d984f7709554a53182969103472a4a17aa124809b813",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-037",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "infrastructure_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "952ef5e70594",
+        "subject": "interface_errors",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports interface_errors=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "interface_errors",
+            "metric": "interface_errors",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e77311a6a7d5a5ff716d984f7709554a53182969103472a4a17aa124809b813",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-038",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "infrastructure_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "952ef5e70594",
+        "subject": "link_flaps",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports link_flaps=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "link_flaps",
+            "metric": "link_flaps",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e77311a6a7d5a5ff716d984f7709554a53182969103472a4a17aa124809b813",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-039",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "CAMPUS_CORE_RTR_01",
+        "finding_id": "infrastructure_agent:CAMPUS_CORE_RTR_01",
+        "message_id": "952ef5e70594",
+        "subject": "queue_drops",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports queue_drops=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "queue_drops",
+            "metric": "queue_drops",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        ],
+        "finding_sha256": "4e77311a6a7d5a5ff716d984f7709554a53182969103472a4a17aa124809b813",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-040",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "infrastructure_agent:HOSTEL_CORE_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "device_critical",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports device_critical=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "device_critical",
+            "metric": "status",
+            "value": "Warning",
+            "strength": 0.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "024dd738f2987a6eb2aabcad0009d0b7edc1be99c416482277f5ca4b16154e0a",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-041",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "infrastructure_agent:HOSTEL_CORE_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_cpu",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_cpu=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_cpu",
+            "metric": "cpu_utilization_pct",
+            "value": 53.2,
+            "strength": 0.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "024dd738f2987a6eb2aabcad0009d0b7edc1be99c416482277f5ca4b16154e0a",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-042",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "infrastructure_agent:HOSTEL_CORE_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_memory",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_memory=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_memory",
+            "metric": "memory_utilization_pct",
+            "value": 40.43,
+            "strength": 0.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "024dd738f2987a6eb2aabcad0009d0b7edc1be99c416482277f5ca4b16154e0a",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-043",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "infrastructure_agent:HOSTEL_CORE_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "interface_errors",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports interface_errors=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "interface_errors",
+            "metric": "interface_errors",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "024dd738f2987a6eb2aabcad0009d0b7edc1be99c416482277f5ca4b16154e0a",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-044",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "infrastructure_agent:HOSTEL_CORE_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "link_flaps",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports link_flaps=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "link_flaps",
+            "metric": "link_flaps",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "024dd738f2987a6eb2aabcad0009d0b7edc1be99c416482277f5ca4b16154e0a",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-045",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "finding_id": "infrastructure_agent:HOSTEL_CORE_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "queue_drops",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports queue_drops=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "queue_drops",
+            "metric": "queue_drops",
+            "value": 20.0,
+            "strength": 0.0,
+            "record_indexes": [
+              5,
+              6,
+              7,
+              8,
+              9
+            ]
+          }
+        ],
+        "finding_sha256": "024dd738f2987a6eb2aabcad0009d0b7edc1be99c416482277f5ca4b16154e0a",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-046",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "device_critical",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports device_critical=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "device_critical",
+            "metric": "status",
+            "value": "Healthy",
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "8ea8a8d216c9cfe3647bdf85cac1e3c8d55130eb3b622e6f38f45f7db1abaec3",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-047",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_cpu",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_cpu=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_cpu",
+            "metric": "cpu_utilization_pct",
+            "value": 21.88,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "8ea8a8d216c9cfe3647bdf85cac1e3c8d55130eb3b622e6f38f45f7db1abaec3",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-048",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_memory",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_memory=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_memory",
+            "metric": "memory_utilization_pct",
+            "value": 40.77,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "8ea8a8d216c9cfe3647bdf85cac1e3c8d55130eb3b622e6f38f45f7db1abaec3",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-049",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "interface_errors",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports interface_errors=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "interface_errors",
+            "metric": "interface_errors",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "8ea8a8d216c9cfe3647bdf85cac1e3c8d55130eb3b622e6f38f45f7db1abaec3",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-050",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "link_flaps",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports link_flaps=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "link_flaps",
+            "metric": "link_flaps",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "8ea8a8d216c9cfe3647bdf85cac1e3c8d55130eb3b622e6f38f45f7db1abaec3",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-051",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "queue_drops",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports queue_drops=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "queue_drops",
+            "metric": "queue_drops",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "8ea8a8d216c9cfe3647bdf85cac1e3c8d55130eb3b622e6f38f45f7db1abaec3",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-052",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_02",
+        "message_id": "952ef5e70594",
+        "subject": "device_critical",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports device_critical=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "device_critical",
+            "metric": "status",
+            "value": "Healthy",
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "ae6280db70b65c284b12635582221eb0b38ae03edb136471e86231ff382efa1e",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-053",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_02",
+        "message_id": "952ef5e70594",
+        "subject": "high_cpu",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_cpu=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_cpu",
+            "metric": "cpu_utilization_pct",
+            "value": 22.41,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "ae6280db70b65c284b12635582221eb0b38ae03edb136471e86231ff382efa1e",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-054",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_02",
+        "message_id": "952ef5e70594",
+        "subject": "high_memory",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_memory=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_memory",
+            "metric": "memory_utilization_pct",
+            "value": 39.51,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "ae6280db70b65c284b12635582221eb0b38ae03edb136471e86231ff382efa1e",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-055",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_02",
+        "message_id": "952ef5e70594",
+        "subject": "interface_errors",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports interface_errors=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "interface_errors",
+            "metric": "interface_errors",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "ae6280db70b65c284b12635582221eb0b38ae03edb136471e86231ff382efa1e",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-056",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_02",
+        "message_id": "952ef5e70594",
+        "subject": "link_flaps",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports link_flaps=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "link_flaps",
+            "metric": "link_flaps",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "ae6280db70b65c284b12635582221eb0b38ae03edb136471e86231ff382efa1e",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-057",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_02",
+        "message_id": "952ef5e70594",
+        "subject": "queue_drops",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports queue_drops=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "queue_drops",
+            "metric": "queue_drops",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "ae6280db70b65c284b12635582221eb0b38ae03edb136471e86231ff382efa1e",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-058",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_03",
+        "message_id": "952ef5e70594",
+        "subject": "device_critical",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports device_critical=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "device_critical",
+            "metric": "status",
+            "value": "Healthy",
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "e202b13e3653ecb735ce35aec3a2733b1508095ef1d2dc119c9fb282fc75c257",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-059",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_03",
+        "message_id": "952ef5e70594",
+        "subject": "high_cpu",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_cpu=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_cpu",
+            "metric": "cpu_utilization_pct",
+            "value": 21.77,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "e202b13e3653ecb735ce35aec3a2733b1508095ef1d2dc119c9fb282fc75c257",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-060",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_03",
+        "message_id": "952ef5e70594",
+        "subject": "high_memory",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_memory=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_memory",
+            "metric": "memory_utilization_pct",
+            "value": 40.5,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "e202b13e3653ecb735ce35aec3a2733b1508095ef1d2dc119c9fb282fc75c257",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-061",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_03",
+        "message_id": "952ef5e70594",
+        "subject": "interface_errors",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports interface_errors=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "interface_errors",
+            "metric": "interface_errors",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "e202b13e3653ecb735ce35aec3a2733b1508095ef1d2dc119c9fb282fc75c257",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-062",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_03",
+        "message_id": "952ef5e70594",
+        "subject": "link_flaps",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports link_flaps=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "link_flaps",
+            "metric": "link_flaps",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "e202b13e3653ecb735ce35aec3a2733b1508095ef1d2dc119c9fb282fc75c257",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-063",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "infrastructure_agent:HOSTEL_AP_03",
+        "message_id": "952ef5e70594",
+        "subject": "queue_drops",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports queue_drops=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "queue_drops",
+            "metric": "queue_drops",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "e202b13e3653ecb735ce35aec3a2733b1508095ef1d2dc119c9fb282fc75c257",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-064",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "infrastructure_agent:DEPT_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "device_critical",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports device_critical=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "device_critical",
+            "metric": "status",
+            "value": "Healthy",
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "b116269fcbfd415f3e9f52c22e32e0f29f5540f310906c6fee5848ca3caf4080",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-065",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "infrastructure_agent:DEPT_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_cpu",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_cpu=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_cpu",
+            "metric": "cpu_utilization_pct",
+            "value": 21.99,
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "b116269fcbfd415f3e9f52c22e32e0f29f5540f310906c6fee5848ca3caf4080",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-066",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "infrastructure_agent:DEPT_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_memory",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_memory=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_memory",
+            "metric": "memory_utilization_pct",
+            "value": 41.12,
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "b116269fcbfd415f3e9f52c22e32e0f29f5540f310906c6fee5848ca3caf4080",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-067",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "infrastructure_agent:DEPT_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "interface_errors",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports interface_errors=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "interface_errors",
+            "metric": "interface_errors",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "b116269fcbfd415f3e9f52c22e32e0f29f5540f310906c6fee5848ca3caf4080",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-068",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "infrastructure_agent:DEPT_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "link_flaps",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports link_flaps=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "link_flaps",
+            "metric": "link_flaps",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "b116269fcbfd415f3e9f52c22e32e0f29f5540f310906c6fee5848ca3caf4080",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-069",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "DEPT_SW_01",
+        "finding_id": "infrastructure_agent:DEPT_SW_01",
+        "message_id": "952ef5e70594",
+        "subject": "queue_drops",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports queue_drops=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "queue_drops",
+            "metric": "queue_drops",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              25,
+              26,
+              27,
+              28,
+              29
+            ]
+          }
+        ],
+        "finding_sha256": "b116269fcbfd415f3e9f52c22e32e0f29f5540f310906c6fee5848ca3caf4080",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-070",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "infrastructure_agent:LECTURE_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "device_critical",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports device_critical=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "device_critical",
+            "metric": "status",
+            "value": "Healthy",
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "f46483db1bc1d28f626fe7e9dd63ea0e9f695dc60e11c1c0e195742b3d47a0d9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-071",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "infrastructure_agent:LECTURE_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_cpu",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_cpu=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_cpu",
+            "metric": "cpu_utilization_pct",
+            "value": 22.27,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "f46483db1bc1d28f626fe7e9dd63ea0e9f695dc60e11c1c0e195742b3d47a0d9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-072",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "infrastructure_agent:LECTURE_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "high_memory",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports high_memory=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "high_memory",
+            "metric": "memory_utilization_pct",
+            "value": 40.46,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "f46483db1bc1d28f626fe7e9dd63ea0e9f695dc60e11c1c0e195742b3d47a0d9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-073",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "infrastructure_agent:LECTURE_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "interface_errors",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports interface_errors=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "interface_errors",
+            "metric": "interface_errors",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "f46483db1bc1d28f626fe7e9dd63ea0e9f695dc60e11c1c0e195742b3d47a0d9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-074",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "infrastructure_agent:LECTURE_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "link_flaps",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports link_flaps=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "link_flaps",
+            "metric": "link_flaps",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "f46483db1bc1d28f626fe7e9dd63ea0e9f695dc60e11c1c0e195742b3d47a0d9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-075",
+        "kind": "signal",
+        "agent": "infrastructure_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "infrastructure_agent:LECTURE_AP_01",
+        "message_id": "952ef5e70594",
+        "subject": "queue_drops",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "infrastructure_agent reports queue_drops=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "queue_drops",
+            "metric": "queue_drops",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "f46483db1bc1d28f626fe7e9dd63ea0e9f695dc60e11c1c0e195742b3d47a0d9",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-076",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "connectivity_agent:HOSTEL_AP_01",
+        "message_id": "c12928dbe2c3",
+        "subject": "dhcp_failures",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports dhcp_failures=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "dhcp_failures",
+            "metric": "dhcp_failure_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "304674dcf3faece3d90f8f5c22dd5f69a226e4ca576d44073c9882be0442280c",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-077",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "connectivity_agent:HOSTEL_AP_01",
+        "message_id": "c12928dbe2c3",
+        "subject": "dns_failures",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports dns_failures=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "dns_failures",
+            "metric": "dns_failure_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "304674dcf3faece3d90f8f5c22dd5f69a226e4ca576d44073c9882be0442280c",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-078",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "connectivity_agent:HOSTEL_AP_01",
+        "message_id": "c12928dbe2c3",
+        "subject": "retransmissions",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports retransmissions=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "retransmissions",
+            "metric": "retransmission_pct",
+            "value": 2.98,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "304674dcf3faece3d90f8f5c22dd5f69a226e4ca576d44073c9882be0442280c",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-079",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_01",
+        "finding_id": "connectivity_agent:HOSTEL_AP_01",
+        "message_id": "c12928dbe2c3",
+        "subject": "weak_signal",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports weak_signal=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "weak_signal",
+            "metric": "wifi_rssi_dbm",
+            "value": -57.44,
+            "strength": 0.0,
+            "record_indexes": [
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          }
+        ],
+        "finding_sha256": "304674dcf3faece3d90f8f5c22dd5f69a226e4ca576d44073c9882be0442280c",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-080",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "connectivity_agent:HOSTEL_AP_02",
+        "message_id": "c12928dbe2c3",
+        "subject": "dhcp_failures",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports dhcp_failures=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "dhcp_failures",
+            "metric": "dhcp_failure_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "e1abaf91c2447112bd27fbe5c5255c719b4872ceedbdbf99c74942c72560c556",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-081",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "connectivity_agent:HOSTEL_AP_02",
+        "message_id": "c12928dbe2c3",
+        "subject": "dns_failures",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports dns_failures=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "dns_failures",
+            "metric": "dns_failure_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "e1abaf91c2447112bd27fbe5c5255c719b4872ceedbdbf99c74942c72560c556",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-082",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "connectivity_agent:HOSTEL_AP_02",
+        "message_id": "c12928dbe2c3",
+        "subject": "retransmissions",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports retransmissions=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "retransmissions",
+            "metric": "retransmission_pct",
+            "value": 2.96,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "e1abaf91c2447112bd27fbe5c5255c719b4872ceedbdbf99c74942c72560c556",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-083",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_02",
+        "finding_id": "connectivity_agent:HOSTEL_AP_02",
+        "message_id": "c12928dbe2c3",
+        "subject": "weak_signal",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports weak_signal=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "weak_signal",
+            "metric": "wifi_rssi_dbm",
+            "value": -58.33,
+            "strength": 0.0,
+            "record_indexes": [
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          }
+        ],
+        "finding_sha256": "e1abaf91c2447112bd27fbe5c5255c719b4872ceedbdbf99c74942c72560c556",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-084",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "connectivity_agent:HOSTEL_AP_03",
+        "message_id": "c12928dbe2c3",
+        "subject": "dhcp_failures",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports dhcp_failures=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "dhcp_failures",
+            "metric": "dhcp_failure_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "c7206dd0944f0515f35938fdacc0e9808eb23f0dce235d80c2e476b1ef6b2982",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-085",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "connectivity_agent:HOSTEL_AP_03",
+        "message_id": "c12928dbe2c3",
+        "subject": "dns_failures",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports dns_failures=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "dns_failures",
+            "metric": "dns_failure_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "c7206dd0944f0515f35938fdacc0e9808eb23f0dce235d80c2e476b1ef6b2982",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-086",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "connectivity_agent:HOSTEL_AP_03",
+        "message_id": "c12928dbe2c3",
+        "subject": "retransmissions",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports retransmissions=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "retransmissions",
+            "metric": "retransmission_pct",
+            "value": 2.98,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "c7206dd0944f0515f35938fdacc0e9808eb23f0dce235d80c2e476b1ef6b2982",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-087",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "HOSTEL_AP_03",
+        "finding_id": "connectivity_agent:HOSTEL_AP_03",
+        "message_id": "c12928dbe2c3",
+        "subject": "weak_signal",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports weak_signal=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "weak_signal",
+            "metric": "wifi_rssi_dbm",
+            "value": -56.56,
+            "strength": 0.0,
+            "record_indexes": [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          }
+        ],
+        "finding_sha256": "c7206dd0944f0515f35938fdacc0e9808eb23f0dce235d80c2e476b1ef6b2982",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-088",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "connectivity_agent:LECTURE_AP_01",
+        "message_id": "c12928dbe2c3",
+        "subject": "dhcp_failures",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports dhcp_failures=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "dhcp_failures",
+            "metric": "dhcp_failure_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "315d65441d6e991613da22d8374289ad40026a77c3e72c935566733eee8321ad",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-089",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "connectivity_agent:LECTURE_AP_01",
+        "message_id": "c12928dbe2c3",
+        "subject": "dns_failures",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports dns_failures=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "dns_failures",
+            "metric": "dns_failure_pct",
+            "value": 0.0,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "315d65441d6e991613da22d8374289ad40026a77c3e72c935566733eee8321ad",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-090",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "connectivity_agent:LECTURE_AP_01",
+        "message_id": "c12928dbe2c3",
+        "subject": "retransmissions",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports retransmissions=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "retransmissions",
+            "metric": "retransmission_pct",
+            "value": 3.04,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "315d65441d6e991613da22d8374289ad40026a77c3e72c935566733eee8321ad",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-091",
+        "kind": "signal",
+        "agent": "connectivity_agent",
+        "device_id": "LECTURE_AP_01",
+        "finding_id": "connectivity_agent:LECTURE_AP_01",
+        "message_id": "c12928dbe2c3",
+        "subject": "weak_signal",
+        "reported": 0.0,
+        "expected": {
+          "strength": 0.0
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent reports weak_signal=0.00; recomputed from telemetry: 0.00",
+        "telemetry_refs": [
+          {
+            "signal": "weak_signal",
+            "metric": "wifi_rssi_dbm",
+            "value": -57.82,
+            "strength": 0.0,
+            "record_indexes": [
+              30,
+              31,
+              32,
+              33,
+              34
+            ]
+          }
+        ],
+        "finding_sha256": "315d65441d6e991613da22d8374289ad40026a77c3e72c935566733eee8321ad",
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      },
+      {
+        "record_id": "TG-092",
+        "kind": "scope",
+        "agent": "connectivity_agent",
+        "device_id": null,
+        "finding_id": null,
+        "message_id": "c12928dbe2c3",
+        "subject": "scope",
+        "reported": [
+          "HOSTEL_CORE_SW_01"
+        ],
+        "expected": {
+          "degraded": [
+            "HOSTEL_CORE_SW_01"
+          ]
+        },
+        "decision": "trusted",
+        "reason_codes": [
+          "CONSISTENT"
+        ],
+        "explanation": "connectivity_agent scope lists 1 degraded device(s); telemetry has 1",
+        "telemetry_refs": [],
+        "finding_sha256": null,
+        "timestamp": "2026-10-31T23:03:37.251680Z",
+        "audit_version": "1.0",
+        "effect": "passed to correlation unchanged"
+      }
+    ],
+    "note": "SHA-256 digests show that the audit and the findings were not altered after the run; they do not authenticate who wrote a message (no signatures)."
+  },
+  "diagnosis_message_id": "8ef25d023d11",
+  "verification_message_id": "816f2e17e92e",
+  "primary_device": "HOSTEL_CORE_SW_01",
+  "evidence": [
+    {
+      "id": "E1",
+      "device_id": "HOSTEL_CORE_SW_01",
+      "signal": "high_jitter",
+      "metric": "jitter_ms",
+      "value": 53.77,
+      "unit": "ms",
+      "threshold": ">= 30 ms",
+      "onset": "15 ms",
+      "strength": 1.0,
+      "state": "present",
+      "aggregation": "median of 5 sample(s)",
+      "raw_samples": [
+        {
+          "record_index": 5,
+          "timestamp": "2026-10-31T12:00:00Z",
+          "path": [
+            "metrics",
+            "jitter_ms"
+          ],
+          "raw": 53.77,
+          "value": 53.77
+        },
+        {
+          "record_index": 6,
+          "timestamp": "2026-10-31T12:01:00Z",
+          "path": [
+            "metrics",
+            "jitter_ms"
+          ],
+          "raw": 52.35,
+          "value": 52.35
+        },
+        {
+          "record_index": 7,
+          "timestamp": "2026-10-31T12:02:00Z",
+          "path": [
+            "metrics",
+            "jitter_ms"
+          ],
+          "raw": 54.58,
+          "value": 54.58
+        },
+        {
+          "record_index": 8,
+          "timestamp": "2026-10-31T12:03:00Z",
+          "path": [
+            "metrics",
+            "jitter_ms"
+          ],
+          "raw": 56.22,
+          "value": 56.22
+        },
+        {
+          "record_index": 9,
+          "timestamp": "2026-10-31T12:04:00Z",
+          "path": [
+            "metrics",
+            "jitter_ms"
+          ],
+          "raw": 53.27,
+          "value": 53.27
+        }
+      ],
+      "observed_by": [
+        {
+          "agent": "performance_agent",
+          "message_id": "0c27b619b0cf",
+          "source_message_id": "1439948e6c6e",
+          "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+          "strength": 1.0
+        }
+      ],
+      "explains": [
+        "link_congestion",
+        "interface_fault",
+        "weak_wifi",
+        "device_overload",
+        "hardware_failure"
+      ],
+      "expected_by": [],
+      "rules_out": []
+    },
+    {
+      "id": "E2",
+      "device_id": "HOSTEL_CORE_SW_01",
+      "signal": "high_latency",
+      "metric": "latency_ms",
+      "value": 263.43,
+      "unit": "ms",
+      "threshold": ">= 100 ms",
+      "onset": "50 ms",
+      "strength": 1.0,
+      "state": "present",
+      "aggregation": "median of 5 sample(s)",
+      "raw_samples": [
+        {
+          "record_index": 5,
+          "timestamp": "2026-10-31T12:00:00Z",
+          "path": [
+            "metrics",
+            "latency_ms"
+          ],
+          "raw": 251.27,
+          "value": 251.27
+        },
+        {
+          "record_index": 6,
+          "timestamp": "2026-10-31T12:01:00Z",
+          "path": [
+            "metrics",
+            "latency_ms"
+          ],
+          "raw": 263.43,
+          "value": 263.43
+        },
+        {
+          "record_index": 7,
+          "timestamp": "2026-10-31T12:02:00Z",
+          "path": [
+            "metrics",
+            "latency_ms"
+          ],
+          "raw": 252.5,
+          "value": 252.5
+        },
+        {
+          "record_index": 8,
+          "timestamp": "2026-10-31T12:03:00Z",
+          "path": [
+            "metrics",
+            "latency_ms"
+          ],
+          "raw": 264.79,
+          "value": 264.79
+        },
+        {
+          "record_index": 9,
+          "timestamp": "2026-10-31T12:04:00Z",
+          "path": [
+            "metrics",
+            "latency_ms"
+          ],
+          "raw": 271.45,
+          "value": 271.45
+        }
+      ],
+      "observed_by": [
+        {
+          "agent": "performance_agent",
+          "message_id": "0c27b619b0cf",
+          "source_message_id": "1439948e6c6e",
+          "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+          "strength": 1.0
+        }
+      ],
+      "explains": [
+        "link_congestion",
+        "interface_fault",
+        "weak_wifi",
+        "device_overload",
+        "hardware_failure"
+      ],
+      "expected_by": [
+        "link_congestion",
+        "device_overload"
+      ],
+      "rules_out": [
+        "dns_failure",
+        "dhcp_failure"
+      ]
+    },
+    {
+      "id": "E3",
+      "device_id": "HOSTEL_CORE_SW_01",
+      "signal": "packet_loss",
+      "metric": "packet_loss_pct",
+      "value": 0.6,
+      "unit": "%",
+      "threshold": ">= 1 %",
+      "onset": "0.5 %",
+      "strength": 0.2,
+      "state": "elevated",
+      "aggregation": "median of 5 sample(s)",
+      "raw_samples": [
+        {
+          "record_index": 5,
+          "timestamp": "2026-10-31T12:00:00Z",
+          "path": [
+            "metrics",
+            "packet_loss_pct"
+          ],
+          "raw": 0.59,
+          "value": 0.59
+        },
+        {
+          "record_index": 6,
+          "timestamp": "2026-10-31T12:01:00Z",
+          "path": [
+            "metrics",
+            "packet_loss_pct"
+          ],
+          "raw": 0.6,
+          "value": 0.6
+        },
+        {
+          "record_index": 7,
+          "timestamp": "2026-10-31T12:02:00Z",
+          "path": [
+            "metrics",
+            "packet_loss_pct"
+          ],
+          "raw": 0.6,
+          "value": 0.6
+        },
+        {
+          "record_index": 8,
+          "timestamp": "2026-10-31T12:03:00Z",
+          "path": [
+            "metrics",
+            "packet_loss_pct"
+          ],
+          "raw": 0.6,
+          "value": 0.6
+        },
+        {
+          "record_index": 9,
+          "timestamp": "2026-10-31T12:04:00Z",
+          "path": [
+            "metrics",
+            "packet_loss_pct"
+          ],
+          "raw": 0.63,
+          "value": 0.63
+        }
+      ],
+      "observed_by": [
+        {
+          "agent": "performance_agent",
+          "message_id": "0c27b619b0cf",
+          "source_message_id": "1439948e6c6e",
+          "finding_id": "performance_agent:HOSTEL_CORE_SW_01",
+          "strength": 0.2
+        }
+      ],
+      "explains": [
+        "link_congestion",
+        "interface_fault",
+        "weak_wifi",
+        "device_overload",
+        "hardware_failure"
+      ],
+      "expected_by": [
+        "interface_fault"
+      ],
+      "rules_out": []
+    }
+  ],
+  "hypotheses": [
+    {
+      "hypothesis": "device_overload",
+      "verdict": "leading (not committed)",
+      "score": 0.105,
+      "base_vote": 0.14,
+      "coverage": 1.0,
+      "graded_support": 0.5,
+      "votes": [
+        {
+          "agent": "performance_agent",
+          "vote": 0.2,
+          "message_id": "0c27b619b0cf",
+          "source_message_id": "1439948e6c6e",
+          "weight": 0.7
+        }
+      ],
+      "supporting_evidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "unexplained_evidence": [],
+      "expected_signals": [
+        {
+          "signal": "high_cpu",
+          "metric": "cpu_utilization_pct",
+          "value": 53.2,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 90 %"
+        },
+        {
+          "signal": "high_latency",
+          "metric": "latency_ms",
+          "value": 263.43,
+          "strength": 1.0,
+          "state": "present",
+          "threshold": ">= 100 ms"
+        }
+      ],
+      "contradicting": [
+        {
+          "signal": "high_cpu",
+          "metric": "cpu_utilization_pct",
+          "value": 53.2,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 90 %",
+          "why": "expected high_cpu but cpu_utilization_pct = 53.2 is below the warning onset"
+        }
+      ],
+      "missing": [],
+      "rejection_reasons": [],
+      "why_selected": [
+        "highest fused score 0.10 (base vote 0.14, coverage 100%)",
+        "1 of 2 expected signals present in the raw data",
+        "challenge round graded support 0.50"
+      ],
+      "excluded_by_trustguard": []
+    },
+    {
+      "hypothesis": "interface_fault",
+      "verdict": "rejected",
+      "score": 0.096,
+      "base_vote": 0.175,
+      "coverage": 1.0,
+      "graded_support": 0.1,
+      "votes": [
+        {
+          "agent": "performance_agent",
+          "vote": 0.25,
+          "message_id": "0c27b619b0cf",
+          "source_message_id": "1439948e6c6e",
+          "weight": 0.7
+        }
+      ],
+      "supporting_evidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "unexplained_evidence": [],
+      "expected_signals": [
+        {
+          "signal": "interface_errors",
+          "metric": "interface_errors",
+          "value": 0.0,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 50 errors"
+        },
+        {
+          "signal": "packet_loss",
+          "metric": "packet_loss_pct",
+          "value": 0.6,
+          "strength": 0.2,
+          "state": "elevated",
+          "threshold": ">= 1 %"
+        }
+      ],
+      "contradicting": [
+        {
+          "signal": "interface_errors",
+          "metric": "interface_errors",
+          "value": 0.0,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 50 errors",
+          "why": "expected interface_errors but interface_errors = 0.0 is below the warning onset"
+        }
+      ],
+      "missing": [],
+      "rejection_reasons": [
+        "fused score 0.10 vs 0.10 for device_overload",
+        "expected interface_errors but interface_errors = 0.0 is below the warning onset",
+        "only voted for by agents that cannot observe this cause directly (weight 0.7)"
+      ],
+      "why_selected": [],
+      "excluded_by_trustguard": []
+    },
+    {
+      "hypothesis": "link_congestion",
+      "verdict": "not supported",
+      "score": 0.0,
+      "base_vote": 0.0,
+      "coverage": 0.0,
+      "graded_support": null,
+      "votes": [],
+      "supporting_evidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "unexplained_evidence": [],
+      "expected_signals": [
+        {
+          "signal": "high_utilization",
+          "metric": "link_utilization_pct",
+          "value": 68.89,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 85 %"
+        },
+        {
+          "signal": "queue_drops",
+          "metric": "queue_drops",
+          "value": 20.0,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 100 packets"
+        },
+        {
+          "signal": "high_latency",
+          "metric": "latency_ms",
+          "value": 263.43,
+          "strength": 1.0,
+          "state": "present",
+          "threshold": ">= 100 ms"
+        }
+      ],
+      "contradicting": [
+        {
+          "signal": "high_utilization",
+          "metric": "link_utilization_pct",
+          "value": 68.89,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 85 %",
+          "why": "expected high_utilization but link_utilization_pct = 68.89 is below the warning onset"
+        },
+        {
+          "signal": "queue_drops",
+          "metric": "queue_drops",
+          "value": 20.0,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 100 packets",
+          "why": "expected queue_drops but queue_drops = 20.0 is below the warning onset"
+        }
+      ],
+      "missing": [],
+      "rejection_reasons": [
+        "no agent observed evidence for it on HOSTEL_CORE_SW_01",
+        "expected high_utilization but link_utilization_pct = 68.89 is below the warning onset",
+        "expected queue_drops but queue_drops = 20.0 is below the warning onset"
+      ],
+      "why_selected": [],
+      "excluded_by_trustguard": []
+    },
+    {
+      "hypothesis": "weak_wifi",
+      "verdict": "not supported",
+      "score": 0.0,
+      "base_vote": 0.0,
+      "coverage": 0.0,
+      "graded_support": null,
+      "votes": [],
+      "supporting_evidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "unexplained_evidence": [],
+      "expected_signals": [
+        {
+          "signal": "weak_signal",
+          "metric": "wifi_rssi_dbm",
+          "value": null,
+          "strength": null,
+          "state": "unknown",
+          "threshold": "<= -75 dBm"
+        },
+        {
+          "signal": "retransmissions",
+          "metric": "retransmission_pct",
+          "value": null,
+          "strength": null,
+          "state": "unknown",
+          "threshold": ">= 15 %"
+        }
+      ],
+      "contradicting": [],
+      "missing": [
+        {
+          "signal": "weak_signal",
+          "metric": "wifi_rssi_dbm",
+          "value": null,
+          "strength": null,
+          "state": "unknown",
+          "threshold": "<= -75 dBm"
+        },
+        {
+          "signal": "retransmissions",
+          "metric": "retransmission_pct",
+          "value": null,
+          "strength": null,
+          "state": "unknown",
+          "threshold": ">= 15 %"
+        }
+      ],
+      "rejection_reasons": [
+        "no agent observed evidence for it on HOSTEL_CORE_SW_01",
+        "could not be tested: wifi_rssi_dbm, retransmission_pct not measured"
+      ],
+      "why_selected": [],
+      "excluded_by_trustguard": []
+    },
+    {
+      "hypothesis": "hardware_failure",
+      "verdict": "not supported",
+      "score": 0.0,
+      "base_vote": 0.0,
+      "coverage": 0.0,
+      "graded_support": null,
+      "votes": [],
+      "supporting_evidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "unexplained_evidence": [],
+      "expected_signals": [
+        {
+          "signal": "high_cpu",
+          "metric": "cpu_utilization_pct",
+          "value": 53.2,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 90 %"
+        },
+        {
+          "signal": "interface_errors",
+          "metric": "interface_errors",
+          "value": 0.0,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 50 errors"
+        },
+        {
+          "signal": "device_critical",
+          "metric": "status",
+          "value": "Warning",
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": "== Critical"
+        }
+      ],
+      "contradicting": [
+        {
+          "signal": "high_cpu",
+          "metric": "cpu_utilization_pct",
+          "value": 53.2,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 90 %",
+          "why": "expected high_cpu but cpu_utilization_pct = 53.2 is below the warning onset"
+        },
+        {
+          "signal": "interface_errors",
+          "metric": "interface_errors",
+          "value": 0.0,
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": ">= 50 errors",
+          "why": "expected interface_errors but interface_errors = 0.0 is below the warning onset"
+        },
+        {
+          "signal": "device_critical",
+          "metric": "status",
+          "value": "Warning",
+          "strength": 0.0,
+          "state": "absent",
+          "threshold": "== Critical",
+          "why": "expected device_critical but status = Warning is below the warning onset"
+        }
+      ],
+      "missing": [],
+      "rejection_reasons": [
+        "no agent observed evidence for it on HOSTEL_CORE_SW_01",
+        "expected high_cpu but cpu_utilization_pct = 53.2 is below the warning onset",
+        "expected interface_errors but interface_errors = 0.0 is below the warning onset",
+        "expected device_critical but status = Warning is below the warning onset"
+      ],
+      "why_selected": [],
+      "excluded_by_trustguard": []
+    },
+    {
+      "hypothesis": "dns_failure",
+      "verdict": "not supported",
+      "score": 0.0,
+      "base_vote": 0.0,
+      "coverage": 0.0,
+      "graded_support": null,
+      "votes": [],
+      "supporting_evidence": [],
+      "unexplained_evidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "expected_signals": [
+        {
+          "signal": "dns_failures",
+          "metric": "dns_failure_pct",
+          "value": null,
+          "strength": null,
+          "state": "unknown",
+          "threshold": ">= 20 %"
+        }
+      ],
+      "contradicting": [
+        {
+          "signal": "high_latency",
+          "metric": "latency_ms",
+          "why": "high_latency is present, but dns_failure should not produce it"
+        }
+      ],
+      "missing": [
+        {
+          "signal": "dns_failures",
+          "metric": "dns_failure_pct",
+          "value": null,
+          "strength": null,
+          "state": "unknown",
+          "threshold": ">= 20 %"
+        }
+      ],
+      "rejection_reasons": [
+        "no agent observed evidence for it on HOSTEL_CORE_SW_01",
+        "high_latency is present, but dns_failure should not produce it",
+        "could not be tested: dns_failure_pct not measured"
+      ],
+      "why_selected": [],
+      "excluded_by_trustguard": []
+    },
+    {
+      "hypothesis": "dhcp_failure",
+      "verdict": "not supported",
+      "score": 0.0,
+      "base_vote": 0.0,
+      "coverage": 0.0,
+      "graded_support": null,
+      "votes": [],
+      "supporting_evidence": [],
+      "unexplained_evidence": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "expected_signals": [
+        {
+          "signal": "dhcp_failures",
+          "metric": "dhcp_failure_pct",
+          "value": null,
+          "strength": null,
+          "state": "unknown",
+          "threshold": ">= 20 %"
+        }
+      ],
+      "contradicting": [
+        {
+          "signal": "high_latency",
+          "metric": "latency_ms",
+          "why": "high_latency is present, but dhcp_failure should not produce it"
+        }
+      ],
+      "missing": [
+        {
+          "signal": "dhcp_failures",
+          "metric": "dhcp_failure_pct",
+          "value": null,
+          "strength": null,
+          "state": "unknown",
+          "threshold": ">= 20 %"
+        }
+      ],
+      "rejection_reasons": [
+        "no agent observed evidence for it on HOSTEL_CORE_SW_01",
+        "high_latency is present, but dhcp_failure should not produce it",
+        "could not be tested: dhcp_failure_pct not measured"
+      ],
+      "why_selected": [],
+      "excluded_by_trustguard": []
+    }
+  ],
+  "agents": [
+    {
+      "agent": "performance_agent",
+      "transport": "in-process",
+      "domain": "performance",
+      "health": "ok",
+      "card_message_id": "68ddc64fd24f",
+      "messages_sent": 3,
+      "message_types": [
+        "capability_response",
+        "challenge_response",
+        "finding_batch"
+      ],
+      "findings_message_id": "1439948e6c6e",
+      "audited_message_id": "0c27b619b0cf",
+      "trustguard": {
+        "checked": 33,
+        "trusted": 33,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "devices_flagged": [
+        "HOSTEL_CORE_SW_01"
+      ],
+      "on_root_device": {
+        "votes": {
+          "interface_fault": 0.25,
+          "device_overload": 0.2
+        },
+        "signals": {
+          "high_latency": 1.0,
+          "high_jitter": 1.0,
+          "packet_loss": 0.2
+        },
+        "top_vote": {
+          "hypothesis": "interface_fault",
+          "vote": 0.25
+        },
+        "notes": []
+      },
+      "agrees_with_conclusion": false,
+      "leave_one_out": {
+        "status": "insufficient_evidence",
+        "hypothesis": null,
+        "confidence": 0.1,
+        "root_cause_devices": [
+          "HOSTEL_CORE_SW_01"
+        ],
+        "conclusion_changed": true,
+        "confidence_delta": 0.1,
+        "contribution": "decisive"
+      }
+    },
+    {
+      "agent": "infrastructure_agent",
+      "transport": "in-process",
+      "domain": "infrastructure",
+      "health": "ok",
+      "card_message_id": "8657c26588bb",
+      "messages_sent": 3,
+      "message_types": [
+        "capability_response",
+        "challenge_response",
+        "finding_batch"
+      ],
+      "findings_message_id": "952ef5e70594",
+      "audited_message_id": "0c27b619b0cf",
+      "trustguard": {
+        "checked": 42,
+        "trusted": 42,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "devices_flagged": [],
+      "on_root_device": {
+        "votes": {},
+        "signals": {},
+        "top_vote": null,
+        "notes": []
+      },
+      "agrees_with_conclusion": false,
+      "leave_one_out": {
+        "status": "insufficient_evidence",
+        "hypothesis": "interface_fault",
+        "confidence": 0.0,
+        "root_cause_devices": [
+          "HOSTEL_CORE_SW_01"
+        ],
+        "conclusion_changed": true,
+        "confidence_delta": 0.0,
+        "contribution": "decisive"
+      }
+    },
+    {
+      "agent": "connectivity_agent",
+      "transport": "in-process",
+      "domain": "connectivity",
+      "health": "ok",
+      "card_message_id": "18e7f088e847",
+      "messages_sent": 2,
+      "message_types": [
+        "capability_response",
+        "finding_batch"
+      ],
+      "findings_message_id": "c12928dbe2c3",
+      "audited_message_id": "0c27b619b0cf",
+      "trustguard": {
+        "checked": 17,
+        "trusted": 17,
+        "flagged": 0,
+        "unverifiable": 0
+      },
+      "devices_flagged": [],
+      "on_root_device": {
+        "votes": {},
+        "signals": {},
+        "top_vote": null,
+        "notes": [
+          "no connectivity metrics available for this device"
+        ]
+      },
+      "agrees_with_conclusion": false,
+      "leave_one_out": {
+        "status": "insufficient_evidence",
+        "hypothesis": "interface_fault",
+        "confidence": 0.0,
+        "root_cause_devices": [
+          "HOSTEL_CORE_SW_01"
+        ],
+        "conclusion_changed": true,
+        "confidence_delta": 0.0,
+        "contribution": "decisive"
+      }
+    },
+    {
+      "agent": "correlation_agent",
+      "transport": "in-process",
+      "domain": null,
+      "health": "ok",
+      "card_message_id": "0d5af72a7c50",
+      "messages_sent": 4,
+      "message_types": [
+        "capability_response",
+        "diagnosis",
+        "verification_result"
+      ]
+    },
+    {
+      "agent": "reporting_agent",
+      "transport": "in-process",
+      "domain": null,
+      "health": "ok",
+      "card_message_id": "d53028f3838d",
+      "messages_sent": 2,
+      "message_types": [
+        "capability_response",
+        "report"
+      ]
+    },
+    {
+      "agent": "trustguard",
+      "transport": "in-process",
+      "domain": null,
+      "health": "ok",
+      "card_message_id": "417da584ce91",
+      "messages_sent": 2,
+      "message_types": [
+        "audit_result",
+        "capability_response"
+      ]
+    }
+  ],
+  "conflicts": [],
+  "challenge_round": {
+    "triggered": true,
+    "device_id": "HOSTEL_CORE_SW_01",
+    "margin_before": 0.035,
+    "margin_after": 0.009,
+    "answers": {
+      "high_latency": {
+        "metric": "latency_ms",
+        "value": 263.43,
+        "threshold": ">= 100 ms",
+        "onset": "50 ms",
+        "state": "present",
+        "strength": 1.0
+      },
+      "packet_loss": {
+        "metric": "packet_loss_pct",
+        "value": 0.6,
+        "threshold": ">= 1 %",
+        "onset": "0.5 %",
+        "state": "elevated",
+        "strength": 0.2
+      },
+      "high_cpu": {
+        "metric": "cpu_utilization_pct",
+        "value": 53.2,
+        "threshold": ">= 90 %",
+        "onset": "70 %",
+        "state": "absent",
+        "strength": 0.0
+      },
+      "interface_errors": {
+        "metric": "interface_errors",
+        "value": 0.0,
+        "threshold": ">= 50 errors",
+        "onset": "10 errors",
+        "state": "absent",
+        "strength": 0.0
+      }
+    },
+    "winner_changed": true
+  },
+  "topology_reasoning": {
+    "root_candidates": [
+      "HOSTEL_CORE_SW_01"
+    ],
+    "downstream": {},
+    "topology_available": true
+  },
+  "missing_information": [
+    {
+      "device_id": "HOSTEL_CORE_SW_01",
+      "metric": "packet_loss_pct",
+      "signal": "packet_loss",
+      "status": "only elevated (20% of alarm level): re-sample over a longer window",
+      "decides": [
+        "interface_fault"
+      ],
+      "why": "would confirm or rule out interface_fault"
+    }
+  ],
+  "decision_gates": [
+    {
+      "gate": "evidence strength",
+      "value": 0.105,
+      "need": ">= 0.65",
+      "passed": false,
+      "explanation": "fused agent score for device_overload is 0.10"
+    },
+    {
+      "gate": "verification against raw data",
+      "value": 0.5,
+      "need": "expected signals present",
+      "passed": false,
+      "explanation": "1 of 2 expected signals fully present, 1 contradicted"
+    },
+    {
+      "gate": "separation from runner-up",
+      "value": 0.009,
+      "need": ">= 0.15",
+      "passed": false,
+      "explanation": "lead over the next hypothesis is 0.01"
+    },
+    {
+      "gate": "telemetry completeness",
+      "value": 1.0,
+      "need": ">= 0.8",
+      "passed": true,
+      "explanation": "100% of core metrics present"
+    },
+    {
+      "gate": "telemetry consistency",
+      "value": 0,
+      "need": "0 flags",
+      "passed": true,
+      "explanation": "no inconsistencies on the blamed device"
+    },
+    {
+      "gate": "agent availability",
+      "value": 0,
+      "need": "0 failed",
+      "passed": true,
+      "explanation": "all agents answered"
+    }
+  ],
+  "sensitivity": {
+    "engine": "full agent pipeline re-run on modified normalised telemetry (local, no side effects)",
+    "baseline_reproduced": true,
+    "baseline": {
+      "status": "insufficient_evidence",
+      "hypothesis": "device_overload",
+      "confidence": 0.0
+    },
+    "scenarios": [
+      {
+        "kind": "remove_support",
+        "signal": "high_latency",
+        "metric": "latency_ms",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "from": 263.43,
+        "to": 40.0,
+        "change": "latency_ms on HOSTEL_CORE_SW_01: 263.43 -> 40.0 (below warning onset)",
+        "result": {
+          "status": "insufficient_evidence",
+          "hypothesis": "interface_fault",
+          "confidence": 0.0
+        },
+        "flips_conclusion": true
+      },
+      {
+        "kind": "strengthen_rival:interface_fault",
+        "signal": "interface_errors",
+        "metric": "interface_errors",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "from": 0.0,
+        "to": 50,
+        "change": "interface_errors on HOSTEL_CORE_SW_01: 0.0 -> 50 (at alarm level)",
+        "result": {
+          "status": "tentative",
+          "hypothesis": "interface_fault",
+          "confidence": 0.53
+        },
+        "flips_conclusion": true
+      },
+      {
+        "kind": "strengthen_rival:interface_fault",
+        "signal": "packet_loss",
+        "metric": "packet_loss_pct",
+        "device_id": "HOSTEL_CORE_SW_01",
+        "from": 0.6,
+        "to": 1.0,
+        "change": "packet_loss_pct on HOSTEL_CORE_SW_01: 0.6 -> 1.0 (at alarm level)",
+        "result": {
+          "status": "insufficient_evidence",
+          "hypothesis": "interface_fault",
+          "confidence": 0.0
+        },
+        "flips_conclusion": true
+      }
+    ],
+    "decisive": [
+      "latency_ms on HOSTEL_CORE_SW_01: 263.43 -> 40.0 (below warning onset)",
+      "interface_errors on HOSTEL_CORE_SW_01: 0.0 -> 50 (at alarm level)",
+      "packet_loss_pct on HOSTEL_CORE_SW_01: 0.6 -> 1.0 (at alarm level)"
+    ],
+    "robust_to": []
+  },
+  "remediation_check": {
+    "compared": true,
+    "selected": "device_overload",
+    "resolving": [],
+    "verdict": "no single fix resolves the incident (possible multi-fault or unmodelled cause)",
+    "results": {
+      "device_overload": {
+        "action": "Offload control-plane load / upgrade device",
+        "outcome": "unresolved",
+        "after_status": "insufficient_evidence",
+        "residual_signals": [
+          "high_jitter",
+          "high_latency"
+        ],
+        "explanation": "the issue remains: the fix had nothing to act on (its target metrics were not elevated); root device still shows high_jitter, high_latency; re-diagnosis: Insufficient evidence for a reliable root-cause diagnosis"
+      },
+      "interface_fault": {
+        "action": "Replace cable / SFP on the faulty port",
+        "outcome": "unresolved",
+        "after_status": "insufficient_evidence",
+        "residual_signals": [
+          "high_jitter",
+          "high_latency"
+        ],
+        "explanation": "the issue remains: the fix had nothing to act on (its target metrics were not elevated); root device still shows high_jitter, high_latency; re-diagnosis: Insufficient evidence for a reliable root-cause diagnosis"
+      }
+    }
+  },
+  "checks": {
+    "passed": 30,
+    "failed": 0,
+    "total": 30,
+    "verified": true,
+    "failures": [],
+    "checks": [
+      {
+        "check": "log length",
+        "target": "message log",
+        "ok": true,
+        "detail": "trace says 32, log has 32"
+      },
+      {
+        "check": "message digests",
+        "target": "message log",
+        "ok": true,
+        "detail": "0 message(s) altered"
+      },
+      {
+        "check": "chain digest",
+        "target": "message log",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "check": "conclusion matches report message",
+        "target": "809497fcaf13",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "check": "audit recorded in trace",
+        "target": "trustguard",
+        "ok": true,
+        "detail": "audit_result in log but no trustguard section in trace"
+      },
+      {
+        "check": "audit message exists",
+        "target": "0c27b619b0cf",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "check": "trace audit records match logged audit",
+        "target": "0c27b619b0cf",
+        "ok": true,
+        "detail": "trace has 92 record(s), audit message has 92"
+      },
+      {
+        "check": "audited findings come from logged agent messages",
+        "target": "607164e129fe",
+        "ok": true,
+        "detail": "0 cited finding_batch message(s) not in the log"
+      },
+      {
+        "check": "findings unchanged since audit",
+        "target": "0c27b619b0cf",
+        "ok": true,
+        "detail": "0 record(s) whose finding no longer matches its digest"
+      },
+      {
+        "check": "audit reconstructed from telemetry and agent messages",
+        "target": "0c27b619b0cf",
+        "ok": true,
+        "detail": "re-audit: 0 flagged / 0 unverifiable; logged: 0 / 0"
+      },
+      {
+        "check": "audited batches are the filtered originals",
+        "target": "0c27b619b0cf",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "check": "correlation received only audited findings",
+        "target": "b2fde7d2ff5b",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "check": "diagnosis message exists",
+        "target": "8ef25d023d11",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "check": "leading hypothesis matches diagnosis message",
+        "target": "8ef25d023d11",
+        "ok": true,
+        "detail": "message: device_overload, trace: device_overload"
+      },
+      {
+        "check": "canonical value re-derived from raw input",
+        "target": "E1",
+        "ok": true,
+        "detail": "jitter_ms: trace 53.77, re-normalised 53.77"
+      },
+      {
+        "check": "signal strength recomputed",
+        "target": "E1",
+        "ok": true,
+        "detail": "high_jitter: trace 1.0, recomputed 1.0"
+      },
+      {
+        "check": "raw samples found in input",
+        "target": "E1",
+        "ok": true,
+        "detail": "5/5 sample(s) located at their record/field"
+      },
+      {
+        "check": "agent finding cited",
+        "target": "E1<-performance_agent",
+        "ok": true,
+        "detail": "message 0c27b619b0cf"
+      },
+      {
+        "check": "canonical value re-derived from raw input",
+        "target": "E2",
+        "ok": true,
+        "detail": "latency_ms: trace 263.43, re-normalised 263.43"
+      },
+      {
+        "check": "signal strength recomputed",
+        "target": "E2",
+        "ok": true,
+        "detail": "high_latency: trace 1.0, recomputed 1.0"
+      },
+      {
+        "check": "raw samples found in input",
+        "target": "E2",
+        "ok": true,
+        "detail": "5/5 sample(s) located at their record/field"
+      },
+      {
+        "check": "agent finding cited",
+        "target": "E2<-performance_agent",
+        "ok": true,
+        "detail": "message 0c27b619b0cf"
+      },
+      {
+        "check": "canonical value re-derived from raw input",
+        "target": "E3",
+        "ok": true,
+        "detail": "packet_loss_pct: trace 0.6, re-normalised 0.6"
+      },
+      {
+        "check": "signal strength recomputed",
+        "target": "E3",
+        "ok": true,
+        "detail": "packet_loss: trace 0.2, recomputed 0.2"
+      },
+      {
+        "check": "raw samples found in input",
+        "target": "E3",
+        "ok": true,
+        "detail": "5/5 sample(s) located at their record/field"
+      },
+      {
+        "check": "agent finding cited",
+        "target": "E3<-performance_agent",
+        "ok": true,
+        "detail": "message 0c27b619b0cf"
+      },
+      {
+        "check": "vote cited",
+        "target": "device_overload<-performance_agent",
+        "ok": true,
+        "detail": ""
+      },
+      {
+        "check": "fused score recomputed from cited votes and evidence",
+        "target": "device_overload",
+        "ok": true,
+        "detail": "recomputed 0.105, diagnosis message 0.105"
+      },
+      {
+        "check": "selected hypothesis outranks every alternative",
+        "target": "device_overload",
+        "ok": true,
+        "detail": "best alternative 0.096"
+      },
+      {
+        "check": "vote cited",
+        "target": "interface_fault<-performance_agent",
+        "ok": true,
+        "detail": ""
+      }
+    ]
+  }
+}

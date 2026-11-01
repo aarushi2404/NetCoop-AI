@@ -1,0 +1,161 @@
+{
+  "$defs": {
+    "Evidence": {
+      "properties": {
+        "metric": {
+          "title": "Metric",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Value"
+        },
+        "device_id": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Device Id"
+        },
+        "unit": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Unit"
+        },
+        "threshold": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Threshold"
+        },
+        "strength": {
+          "anyOf": [
+            {
+              "maximum": 1.0,
+              "minimum": 0.0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Strength"
+        },
+        "interpretation": {
+          "title": "Interpretation",
+          "type": "string"
+        }
+      },
+      "required": [
+        "metric",
+        "interpretation"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    }
+  },
+  "description": "One agent's view of one device. `votes` maps hypothesis -> support in [0, 1].",
+  "properties": {
+    "finding_id": {
+      "title": "Finding Id",
+      "type": "string"
+    },
+    "agent": {
+      "title": "Agent",
+      "type": "string"
+    },
+    "domain": {
+      "enum": [
+        "performance",
+        "infrastructure",
+        "connectivity"
+      ],
+      "title": "Domain",
+      "type": "string"
+    },
+    "device_id": {
+      "title": "Device Id",
+      "type": "string"
+    },
+    "votes": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Votes",
+      "type": "object"
+    },
+    "signals_present": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Signals Present",
+      "type": "array"
+    },
+    "signals_unknown": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Signals Unknown",
+      "type": "array"
+    },
+    "signal_strength": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Signal Strength",
+      "type": "object"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/Evidence"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "notes": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "finding_id",
+    "agent",
+    "domain",
+    "device_id"
+  ],
+  "title": "Finding",
+  "type": "object"
+}

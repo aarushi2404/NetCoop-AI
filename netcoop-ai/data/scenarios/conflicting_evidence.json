@@ -1,0 +1,755 @@
+{
+  "incident_id": "INC-CONFLICTING_EVIDENCE",
+  "topology": {
+    "devices": [
+      {
+        "id": "CAMPUS_CORE_RTR_01",
+        "role": "router",
+        "parent": null
+      },
+      {
+        "id": "HOSTEL_CORE_SW_01",
+        "role": "switch",
+        "parent": "CAMPUS_CORE_RTR_01"
+      },
+      {
+        "id": "HOSTEL_AP_01",
+        "role": "access_point",
+        "parent": "HOSTEL_CORE_SW_01"
+      },
+      {
+        "id": "HOSTEL_AP_02",
+        "role": "access_point",
+        "parent": "HOSTEL_CORE_SW_01"
+      },
+      {
+        "id": "HOSTEL_AP_03",
+        "role": "access_point",
+        "parent": "HOSTEL_CORE_SW_01"
+      },
+      {
+        "id": "DEPT_SW_01",
+        "role": "switch",
+        "parent": "CAMPUS_CORE_RTR_01"
+      },
+      {
+        "id": "LECTURE_AP_01",
+        "role": "access_point",
+        "parent": "DEPT_SW_01"
+      }
+    ]
+  },
+  "schema_version": "1.0",
+  "records": [
+    {
+      "timestamp": "2026-10-31T12:00:00Z",
+      "device_id": "CAMPUS_CORE_RTR_01",
+      "metrics": {
+        "latency_ms": 11.42,
+        "jitter_ms": 1.96,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 33.98,
+        "cpu_utilization_pct": 22.43,
+        "memory_utilization_pct": 39.37,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 296.08,
+        "bandwidth_mbps": 1019.54
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:01:00Z",
+      "device_id": "CAMPUS_CORE_RTR_01",
+      "metrics": {
+        "latency_ms": 12.53,
+        "jitter_ms": 2.04,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 34.24,
+        "cpu_utilization_pct": 23.1,
+        "memory_utilization_pct": 38.96,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 291.35,
+        "bandwidth_mbps": 973.55
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:02:00Z",
+      "device_id": "CAMPUS_CORE_RTR_01",
+      "metrics": {
+        "latency_ms": 11.73,
+        "jitter_ms": 1.96,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 33.44,
+        "cpu_utilization_pct": 22.42,
+        "memory_utilization_pct": 38.93,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 307.49,
+        "bandwidth_mbps": 1048.06
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:03:00Z",
+      "device_id": "CAMPUS_CORE_RTR_01",
+      "metrics": {
+        "latency_ms": 11.92,
+        "jitter_ms": 2.02,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 33.34,
+        "cpu_utilization_pct": 21.16,
+        "memory_utilization_pct": 40.07,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 311.51,
+        "bandwidth_mbps": 953.77
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:04:00Z",
+      "device_id": "CAMPUS_CORE_RTR_01",
+      "metrics": {
+        "latency_ms": 11.82,
+        "jitter_ms": 2.06,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 35.84,
+        "cpu_utilization_pct": 21.67,
+        "memory_utilization_pct": 38.64,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 304.03,
+        "bandwidth_mbps": 1022.09
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:00:00Z",
+      "device_id": "HOSTEL_CORE_SW_01",
+      "metrics": {
+        "latency_ms": 12.47,
+        "jitter_ms": 2.07,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 34.36,
+        "cpu_utilization_pct": 21.88,
+        "memory_utilization_pct": 38.81,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 287.35,
+        "bandwidth_mbps": 963.71
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:01:00Z",
+      "device_id": "HOSTEL_CORE_SW_01",
+      "metrics": {
+        "latency_ms": 11.8,
+        "jitter_ms": 1.99,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 34.57,
+        "cpu_utilization_pct": 21.95,
+        "memory_utilization_pct": 39.36,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 298.32,
+        "bandwidth_mbps": 976.29
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:02:00Z",
+      "device_id": "HOSTEL_CORE_SW_01",
+      "metrics": {
+        "latency_ms": 11.4,
+        "jitter_ms": 1.9,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 34.57,
+        "cpu_utilization_pct": 21.12,
+        "memory_utilization_pct": 38.14,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 307.92,
+        "bandwidth_mbps": 989.44
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:03:00Z",
+      "device_id": "HOSTEL_CORE_SW_01",
+      "metrics": {
+        "latency_ms": 11.69,
+        "jitter_ms": 1.97,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 33.44,
+        "cpu_utilization_pct": 22.91,
+        "memory_utilization_pct": 38.85,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 311.7,
+        "bandwidth_mbps": 979.84
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:04:00Z",
+      "device_id": "HOSTEL_CORE_SW_01",
+      "metrics": {
+        "latency_ms": 12.48,
+        "jitter_ms": 1.99,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 33.6,
+        "cpu_utilization_pct": 23.09,
+        "memory_utilization_pct": 41.25,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 296.87,
+        "bandwidth_mbps": 1048.23
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:00:00Z",
+      "device_id": "HOSTEL_AP_01",
+      "metrics": {
+        "latency_ms": 12.19,
+        "jitter_ms": 2.01,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 30.36,
+        "cpu_utilization_pct": 22.86,
+        "memory_utilization_pct": 41.05,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 91.45,
+        "bandwidth_mbps": 297.99,
+        "wifi_rssi_dbm": -59.95,
+        "retransmission_pct": 3.07,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:01:00Z",
+      "device_id": "HOSTEL_AP_01",
+      "metrics": {
+        "latency_ms": 11.47,
+        "jitter_ms": 2.03,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 29.52,
+        "cpu_utilization_pct": 21.57,
+        "memory_utilization_pct": 40.75,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 94.45,
+        "bandwidth_mbps": 290.78,
+        "wifi_rssi_dbm": -55.53,
+        "retransmission_pct": 3.09,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:02:00Z",
+      "device_id": "HOSTEL_AP_01",
+      "metrics": {
+        "latency_ms": 11.94,
+        "jitter_ms": 1.91,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 30.18,
+        "cpu_utilization_pct": 21.63,
+        "memory_utilization_pct": 39.82,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 92.62,
+        "bandwidth_mbps": 286.41,
+        "wifi_rssi_dbm": -56.39,
+        "retransmission_pct": 2.91,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:03:00Z",
+      "device_id": "HOSTEL_AP_01",
+      "metrics": {
+        "latency_ms": 12.56,
+        "jitter_ms": 1.96,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 29.04,
+        "cpu_utilization_pct": 22.99,
+        "memory_utilization_pct": 38.42,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 91.03,
+        "bandwidth_mbps": 287.41,
+        "wifi_rssi_dbm": -58.33,
+        "retransmission_pct": 3.14,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:04:00Z",
+      "device_id": "HOSTEL_AP_01",
+      "metrics": {
+        "latency_ms": 12.37,
+        "jitter_ms": 1.95,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 29.18,
+        "cpu_utilization_pct": 22.45,
+        "memory_utilization_pct": 41.64,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 89.32,
+        "bandwidth_mbps": 298.38,
+        "wifi_rssi_dbm": -57.7,
+        "retransmission_pct": 3.13,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:00:00Z",
+      "device_id": "HOSTEL_AP_02",
+      "metrics": {
+        "latency_ms": 12.2,
+        "jitter_ms": 2.03,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 28.99,
+        "cpu_utilization_pct": 22.0,
+        "memory_utilization_pct": 40.04,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 91.76,
+        "bandwidth_mbps": 295.68,
+        "wifi_rssi_dbm": -55.69,
+        "retransmission_pct": 3.04,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:01:00Z",
+      "device_id": "HOSTEL_AP_02",
+      "metrics": {
+        "latency_ms": 12.22,
+        "jitter_ms": 2.05,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 31.24,
+        "cpu_utilization_pct": 22.72,
+        "memory_utilization_pct": 39.76,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 89.06,
+        "bandwidth_mbps": 295.59,
+        "wifi_rssi_dbm": -56.66,
+        "retransmission_pct": 2.99,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:02:00Z",
+      "device_id": "HOSTEL_AP_02",
+      "metrics": {
+        "latency_ms": 12.46,
+        "jitter_ms": 2.03,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 28.86,
+        "cpu_utilization_pct": 21.46,
+        "memory_utilization_pct": 39.0,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 85.67,
+        "bandwidth_mbps": 300.35,
+        "wifi_rssi_dbm": -60.12,
+        "retransmission_pct": 2.93,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:03:00Z",
+      "device_id": "HOSTEL_AP_02",
+      "metrics": {
+        "latency_ms": 12.04,
+        "jitter_ms": 2.08,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 31.19,
+        "cpu_utilization_pct": 22.54,
+        "memory_utilization_pct": 40.62,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 94.03,
+        "bandwidth_mbps": 302.49,
+        "wifi_rssi_dbm": -56.82,
+        "retransmission_pct": 3.02,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:04:00Z",
+      "device_id": "HOSTEL_AP_02",
+      "metrics": {
+        "latency_ms": 12.03,
+        "jitter_ms": 2.05,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 30.73,
+        "cpu_utilization_pct": 21.47,
+        "memory_utilization_pct": 39.62,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 92.51,
+        "bandwidth_mbps": 313.89,
+        "wifi_rssi_dbm": -56.74,
+        "retransmission_pct": 3.04,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:00:00Z",
+      "device_id": "HOSTEL_AP_03",
+      "metrics": {
+        "latency_ms": 11.41,
+        "jitter_ms": 1.94,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 29.63,
+        "cpu_utilization_pct": 21.12,
+        "memory_utilization_pct": 40.04,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 93.86,
+        "bandwidth_mbps": 303.13,
+        "wifi_rssi_dbm": -58.37,
+        "retransmission_pct": 2.94,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:01:00Z",
+      "device_id": "HOSTEL_AP_03",
+      "metrics": {
+        "latency_ms": 12.26,
+        "jitter_ms": 1.96,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 30.61,
+        "cpu_utilization_pct": 21.55,
+        "memory_utilization_pct": 39.31,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 89.44,
+        "bandwidth_mbps": 300.49,
+        "wifi_rssi_dbm": -58.68,
+        "retransmission_pct": 3.09,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:02:00Z",
+      "device_id": "HOSTEL_AP_03",
+      "metrics": {
+        "latency_ms": 11.5,
+        "jitter_ms": 2.04,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 29.39,
+        "cpu_utilization_pct": 22.46,
+        "memory_utilization_pct": 39.95,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 88.61,
+        "bandwidth_mbps": 311.25,
+        "wifi_rssi_dbm": -60.39,
+        "retransmission_pct": 2.95,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:03:00Z",
+      "device_id": "HOSTEL_AP_03",
+      "metrics": {
+        "latency_ms": 12.59,
+        "jitter_ms": 1.94,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 30.47,
+        "cpu_utilization_pct": 22.33,
+        "memory_utilization_pct": 38.97,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 86.82,
+        "bandwidth_mbps": 294.54,
+        "wifi_rssi_dbm": -60.37,
+        "retransmission_pct": 2.95,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:04:00Z",
+      "device_id": "HOSTEL_AP_03",
+      "metrics": {
+        "latency_ms": 11.5,
+        "jitter_ms": 2.02,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 29.96,
+        "cpu_utilization_pct": 22.13,
+        "memory_utilization_pct": 39.44,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 92.29,
+        "bandwidth_mbps": 293.09,
+        "wifi_rssi_dbm": -57.96,
+        "retransmission_pct": 3.1,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:00:00Z",
+      "device_id": "DEPT_SW_01",
+      "metrics": {
+        "latency_ms": 186.21,
+        "jitter_ms": 38.81,
+        "packet_loss_pct": 3.96,
+        "link_utilization_pct": 87.99,
+        "cpu_utilization_pct": 43.36,
+        "memory_utilization_pct": 41.37,
+        "queue_drops": 10.0,
+        "interface_errors": 406.0,
+        "link_flaps": 5.0,
+        "throughput_mbps": 287.93,
+        "bandwidth_mbps": 1023.18
+      },
+      "status": "Warning"
+    },
+    {
+      "timestamp": "2026-10-31T12:01:00Z",
+      "device_id": "DEPT_SW_01",
+      "metrics": {
+        "latency_ms": 187.58,
+        "jitter_ms": 41.72,
+        "packet_loss_pct": 4.13,
+        "link_utilization_pct": 86.85,
+        "cpu_utilization_pct": 44.99,
+        "memory_utilization_pct": 41.82,
+        "queue_drops": 10.0,
+        "interface_errors": 399.0,
+        "link_flaps": 5.0,
+        "throughput_mbps": 306.81,
+        "bandwidth_mbps": 1032.19
+      },
+      "status": "Warning"
+    },
+    {
+      "timestamp": "2026-10-31T12:02:00Z",
+      "device_id": "DEPT_SW_01",
+      "metrics": {
+        "latency_ms": 184.52,
+        "jitter_ms": 38.1,
+        "packet_loss_pct": 4.17,
+        "link_utilization_pct": 88.83,
+        "cpu_utilization_pct": 46.88,
+        "memory_utilization_pct": 38.97,
+        "queue_drops": 10.0,
+        "interface_errors": 393.0,
+        "link_flaps": 5.0,
+        "throughput_mbps": 310.56,
+        "bandwidth_mbps": 990.37
+      },
+      "status": "Warning"
+    },
+    {
+      "timestamp": "2026-10-31T12:03:00Z",
+      "device_id": "DEPT_SW_01",
+      "metrics": {
+        "latency_ms": 181.43,
+        "jitter_ms": 38.6,
+        "packet_loss_pct": 3.86,
+        "link_utilization_pct": 87.46,
+        "cpu_utilization_pct": 47.04,
+        "memory_utilization_pct": 41.12,
+        "queue_drops": 10.0,
+        "interface_errors": 418.0,
+        "link_flaps": 5.0,
+        "throughput_mbps": 288.79,
+        "bandwidth_mbps": 995.01
+      },
+      "status": "Warning"
+    },
+    {
+      "timestamp": "2026-10-31T12:04:00Z",
+      "device_id": "DEPT_SW_01",
+      "metrics": {
+        "latency_ms": 181.57,
+        "jitter_ms": 40.77,
+        "packet_loss_pct": 4.01,
+        "link_utilization_pct": 88.92,
+        "cpu_utilization_pct": 43.0,
+        "memory_utilization_pct": 41.95,
+        "queue_drops": 10.0,
+        "interface_errors": 393.0,
+        "link_flaps": 5.0,
+        "throughput_mbps": 296.17,
+        "bandwidth_mbps": 969.28
+      },
+      "status": "Warning"
+    },
+    {
+      "timestamp": "2026-10-31T12:00:00Z",
+      "device_id": "LECTURE_AP_01",
+      "metrics": {
+        "latency_ms": 12.08,
+        "jitter_ms": 2.06,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 29.77,
+        "cpu_utilization_pct": 22.89,
+        "memory_utilization_pct": 40.65,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 91.7,
+        "bandwidth_mbps": 286.95,
+        "wifi_rssi_dbm": -60.35,
+        "retransmission_pct": 3.02,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:01:00Z",
+      "device_id": "LECTURE_AP_01",
+      "metrics": {
+        "latency_ms": 12.07,
+        "jitter_ms": 2.01,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 29.72,
+        "cpu_utilization_pct": 20.91,
+        "memory_utilization_pct": 38.23,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 88.68,
+        "bandwidth_mbps": 305.78,
+        "wifi_rssi_dbm": -58.53,
+        "retransmission_pct": 3.09,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:02:00Z",
+      "device_id": "LECTURE_AP_01",
+      "metrics": {
+        "latency_ms": 12.02,
+        "jitter_ms": 2.04,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 29.43,
+        "cpu_utilization_pct": 22.41,
+        "memory_utilization_pct": 39.94,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 91.02,
+        "bandwidth_mbps": 300.91,
+        "wifi_rssi_dbm": -55.63,
+        "retransmission_pct": 2.94,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:03:00Z",
+      "device_id": "LECTURE_AP_01",
+      "metrics": {
+        "latency_ms": 11.65,
+        "jitter_ms": 1.96,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 30.45,
+        "cpu_utilization_pct": 22.93,
+        "memory_utilization_pct": 38.37,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 88.51,
+        "bandwidth_mbps": 310.94,
+        "wifi_rssi_dbm": -56.47,
+        "retransmission_pct": 3.11,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    },
+    {
+      "timestamp": "2026-10-31T12:04:00Z",
+      "device_id": "LECTURE_AP_01",
+      "metrics": {
+        "latency_ms": 12.45,
+        "jitter_ms": 2.01,
+        "packet_loss_pct": 0.0,
+        "link_utilization_pct": 31.2,
+        "cpu_utilization_pct": 22.29,
+        "memory_utilization_pct": 41.63,
+        "queue_drops": 0.0,
+        "interface_errors": 0.0,
+        "link_flaps": 0.0,
+        "throughput_mbps": 93.84,
+        "bandwidth_mbps": 314.36,
+        "wifi_rssi_dbm": -56.64,
+        "retransmission_pct": 2.97,
+        "dns_failure_pct": 0.0,
+        "dhcp_failure_pct": 0.0
+      },
+      "status": "Healthy"
+    }
+  ]
+}

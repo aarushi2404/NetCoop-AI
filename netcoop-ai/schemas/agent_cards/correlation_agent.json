@@ -1,0 +1,23 @@
+{
+  "agent": "correlation_agent",
+  "description": "Fuses specialist votes, resolves conflicts, runs the challenge re-score, verifies and scores confidence.",
+  "domain": null,
+  "version": "1.0",
+  "protocol_versions": [
+    "1.0"
+  ],
+  "accepts": [
+    "capability_request",
+    "correlate_request",
+    "verify_request"
+  ],
+  "produces": [
+    "capability_response",
+    "diagnosis",
+    "verification_result"
+  ],
+  "hypotheses": [],
+  "signals": [],
+  "transport": "in-process",
+  "negotiation": null
+}

@@ -1,0 +1,32 @@
+{
+  "agent": "connectivity_agent",
+  "description": "Wi-Fi quality, DNS/DHCP service health and topology-aware scope analysis.",
+  "domain": "connectivity",
+  "version": "1.0",
+  "protocol_versions": [
+    "1.0"
+  ],
+  "accepts": [
+    "capability_request",
+    "analyze_request",
+    "challenge_request"
+  ],
+  "produces": [
+    "capability_response",
+    "finding_batch",
+    "challenge_response"
+  ],
+  "hypotheses": [
+    "weak_wifi",
+    "dns_failure",
+    "dhcp_failure"
+  ],
+  "signals": [
+    "weak_signal",
+    "retransmissions",
+    "dns_failures",
+    "dhcp_failures"
+  ],
+  "transport": "in-process",
+  "negotiation": null
+}

@@ -1,0 +1,96 @@
+{
+  "incident_id": "ORG-7-016",
+  "source": "organizer notebook generator",
+  "label": "latency_spike",
+  "faulty_device": "SW_CAMPUS_5",
+  "devices": [
+    "SW_CAMPUS_1",
+    "SW_CAMPUS_5"
+  ],
+  "records": [
+    {
+      "timestamp": "2026-10-31T16:00:00Z",
+      "device_id": "SW_CAMPUS_1",
+      "metrics": {
+        "cpu_utilization_pct": 18.21,
+        "link_utilization_pct": 27.18,
+        "packet_loss_pct": 0.0,
+        "latency_ms": 18.61,
+        "jitter_ms": 3.52,
+        "queue_drops": 0
+      },
+      "status": "Healthy",
+      "generator_device_id": "SW_CAMPUS_7"
+    },
+    {
+      "timestamp": "2026-10-31T16:05:00Z",
+      "device_id": "SW_CAMPUS_5",
+      "metrics": {
+        "cpu_utilization_pct": 60.91,
+        "link_utilization_pct": 78.42,
+        "packet_loss_pct": 0.19,
+        "latency_ms": 297.62,
+        "jitter_ms": 48.17,
+        "queue_drops": 34
+      },
+      "status": "Warning",
+      "generator_device_id": "SW_CAMPUS_1"
+    },
+    {
+      "timestamp": "2026-10-31T16:01:00Z",
+      "device_id": "SW_CAMPUS_1",
+      "metrics": {
+        "cpu_utilization_pct": 21.74,
+        "link_utilization_pct": 45.19,
+        "packet_loss_pct": 0.0,
+        "latency_ms": 15.46,
+        "jitter_ms": 4.43,
+        "queue_drops": 0
+      },
+      "status": "Healthy",
+      "generator_device_id": "SW_CAMPUS_9"
+    },
+    {
+      "timestamp": "2026-10-31T16:04:00Z",
+      "device_id": "SW_CAMPUS_5",
+      "metrics": {
+        "cpu_utilization_pct": 67.87,
+        "link_utilization_pct": 68.62,
+        "packet_loss_pct": 0.3,
+        "latency_ms": 157.18,
+        "jitter_ms": 32.08,
+        "queue_drops": 44
+      },
+      "status": "Warning",
+      "generator_device_id": "SW_CAMPUS_10"
+    },
+    {
+      "timestamp": "2026-10-31T16:02:00Z",
+      "device_id": "SW_CAMPUS_1",
+      "metrics": {
+        "cpu_utilization_pct": 33.89,
+        "link_utilization_pct": 27.01,
+        "packet_loss_pct": 0.0,
+        "latency_ms": 18.27,
+        "jitter_ms": 4.16,
+        "queue_drops": 0
+      },
+      "status": "Healthy",
+      "generator_device_id": "SW_CAMPUS_7"
+    },
+    {
+      "timestamp": "2026-10-31T16:03:00Z",
+      "device_id": "SW_CAMPUS_5",
+      "metrics": {
+        "cpu_utilization_pct": 58.68,
+        "link_utilization_pct": 61.95,
+        "packet_loss_pct": 1.38,
+        "latency_ms": 186.15,
+        "jitter_ms": 31.35,
+        "queue_drops": 6
+      },
+      "status": "Warning",
+      "generator_device_id": "SW_CAMPUS_7"
+    }
+  ]
+}

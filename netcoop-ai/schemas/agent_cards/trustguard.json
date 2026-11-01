@@ -1,0 +1,21 @@
+{
+  "agent": "trustguard",
+  "description": "Audits every specialist claim against the normalised telemetry before correlation: trusted / flagged / unverifiable, filtered claim by claim. Never diagnoses.",
+  "domain": null,
+  "version": "1.0",
+  "protocol_versions": [
+    "1.0"
+  ],
+  "accepts": [
+    "capability_request",
+    "audit_request"
+  ],
+  "produces": [
+    "capability_response",
+    "audit_result"
+  ],
+  "hypotheses": [],
+  "signals": [],
+  "transport": "in-process",
+  "negotiation": null
+}

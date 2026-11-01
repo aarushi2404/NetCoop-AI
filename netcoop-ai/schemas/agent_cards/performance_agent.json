@@ -1,0 +1,33 @@
+{
+  "agent": "performance_agent",
+  "description": "Analyses latency, jitter, packet loss and link utilization; votes on congestion.",
+  "domain": "performance",
+  "version": "1.0",
+  "protocol_versions": [
+    "1.0"
+  ],
+  "accepts": [
+    "capability_request",
+    "analyze_request",
+    "challenge_request"
+  ],
+  "produces": [
+    "capability_response",
+    "finding_batch",
+    "challenge_response"
+  ],
+  "hypotheses": [
+    "link_congestion",
+    "interface_fault",
+    "weak_wifi",
+    "device_overload"
+  ],
+  "signals": [
+    "high_latency",
+    "high_jitter",
+    "packet_loss",
+    "high_utilization"
+  ],
+  "transport": "in-process",
+  "negotiation": null
+}

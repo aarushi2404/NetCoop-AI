@@ -1,0 +1,1503 @@
+{
+  "source": {
+    "notebook": "data/organizer/mock-data-builder-netScoopAI.ipynb",
+    "function": "generate_telemetry",
+    "fault_types": [
+      "hardware_failure",
+      "latency_spike",
+      "normal"
+    ],
+    "skipped_statements": [
+      "print(json.dumps(generate_telemetry('hardware_failure'), indent=2))"
+    ],
+    "cells": 1
+  },
+  "n": 40,
+  "seed": 7,
+  "ground_truth_mapping": {
+    "normal": "healthy",
+    "hardware_failure": "hardware_failure",
+    "latency_spike": "symptom_only"
+  },
+  "adaptations": [
+    "records grouped into incidents of 2-5 devices x 3-5 samples; device_id made consistent per device (generator's random id kept as generator_device_id)",
+    "one faulty device per incident, the rest generated with fault_type='normal'",
+    "seeded random and a deterministic clock injected for reproducibility",
+    "no topology given (the notebook has none)"
+  ],
+  "clean": {
+    "n": 40,
+    "accuracy": 1.0,
+    "false_diagnosis_rate": 0.0,
+    "abstention_rate": 0.325,
+    "detection_rate": 1.0,
+    "false_alarm_rate_on_normal": 0.0,
+    "outcomes": {
+      "correct": 40
+    },
+    "per_label": {
+      "hardware_failure": {
+        "n": 14,
+        "accuracy": 1.0,
+        "outcomes": {
+          "correct": 14
+        },
+        "status": {
+          "diagnosed": 14
+        }
+      },
+      "latency_spike": {
+        "n": 13,
+        "accuracy": 1.0,
+        "outcomes": {
+          "correct": 13
+        },
+        "status": {
+          "insufficient_evidence": 13
+        }
+      },
+      "normal": {
+        "n": 13,
+        "accuracy": 1.0,
+        "outcomes": {
+          "correct": 13
+        },
+        "status": {
+          "healthy": 13
+        }
+      }
+    },
+    "calibration_on_committed": {
+      "ece": 0.23,
+      "bins": [
+        {
+          "bin": "0.65-0.80",
+          "n": 14,
+          "mean_confidence": 0.77,
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "prooftrace_verified": "40/40",
+    "rows": [
+      {
+        "incident": "ORG-7-000",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_5",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_5"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-001",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_8",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_8"
+        ],
+        "confidence": 0.36,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 33,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-002",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-003",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-004",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "insufficient_evidence",
+        "predicted_cause": "interface_fault",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 35,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-005",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-006",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-007",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 35,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-008",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-009",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-010",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.04,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 40,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-011",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-012",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_2",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_2"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-013",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_6",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_6"
+        ],
+        "confidence": 0.25,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 33,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-014",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-015",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_5",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_5"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-016",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_5",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_5"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 31,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-017",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-018",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-019",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.24,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 40,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-020",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-021",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_7",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_7"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-022",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.31,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 33,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-023",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-024",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_7",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_7"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-025",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_9",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_9"
+        ],
+        "confidence": 0.07,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 35,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-026",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-027",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_1",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_1"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-028",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_2",
+        "status": "insufficient_evidence",
+        "predicted_cause": "interface_fault",
+        "root_cause_devices": [
+          "SW_CAMPUS_2"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 35,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-029",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-030",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_2",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_2"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-031",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "insufficient_evidence",
+        "predicted_cause": "device_overload",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 40,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-032",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-033",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_1",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_1"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-034",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 31,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-035",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-036",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_4",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_4"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-037",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.04,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 36,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-038",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-039",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_7",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_7"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      }
+    ]
+  },
+  "stressed": {
+    "n": 40,
+    "accuracy": 1.0,
+    "false_diagnosis_rate": 0.0,
+    "abstention_rate": 0.325,
+    "detection_rate": 1.0,
+    "false_alarm_rate_on_normal": 0.0,
+    "outcomes": {
+      "correct": 40
+    },
+    "per_label": {
+      "hardware_failure": {
+        "n": 14,
+        "accuracy": 1.0,
+        "outcomes": {
+          "correct": 14
+        },
+        "status": {
+          "diagnosed": 14
+        }
+      },
+      "latency_spike": {
+        "n": 13,
+        "accuracy": 1.0,
+        "outcomes": {
+          "correct": 13
+        },
+        "status": {
+          "insufficient_evidence": 13
+        }
+      },
+      "normal": {
+        "n": 13,
+        "accuracy": 1.0,
+        "outcomes": {
+          "correct": 13
+        },
+        "status": {
+          "healthy": 13
+        }
+      }
+    },
+    "calibration_on_committed": {
+      "ece": 0.23,
+      "bins": [
+        {
+          "bin": "0.65-0.80",
+          "n": 14,
+          "mean_confidence": 0.77,
+          "accuracy": 1.0
+        }
+      ]
+    },
+    "prooftrace_verified": "40/40",
+    "rows": [
+      {
+        "incident": "ORG-7-000",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_5",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_5"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-001",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_8",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_8"
+        ],
+        "confidence": 0.36,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 33,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-002",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.7,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-003",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-004",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "insufficient_evidence",
+        "predicted_cause": "interface_fault",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 40,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-005",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-006",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-007",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 31,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-008",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-009",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-010",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.23,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 40,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-011",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-012",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_2",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_2"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-013",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_6",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_6"
+        ],
+        "confidence": 0.25,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 33,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-014",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-015",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_5",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_5"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-016",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_5",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_5"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 31,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-017",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-018",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-019",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.02,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 40,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-020",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.7,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-021",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_7",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_7"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-022",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.28,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 33,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-023",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-024",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_7",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_7"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-025",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_9",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_9"
+        ],
+        "confidence": 0.07,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 35,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-026",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-027",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_1",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_1"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-028",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_2",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_2"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 31,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-029",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-030",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_2",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_2"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-031",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "insufficient_evidence",
+        "predicted_cause": "device_overload",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 40,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-032",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-033",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_1",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_1"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 45,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-034",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_3",
+        "status": "insufficient_evidence",
+        "predicted_cause": "link_congestion",
+        "root_cause_devices": [
+          "SW_CAMPUS_3"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 36,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-035",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.9,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-036",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_4",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_4"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-037",
+        "label": "latency_spike",
+        "faulty_device": "SW_CAMPUS_10",
+        "status": "insufficient_evidence",
+        "predicted_cause": "device_overload",
+        "root_cause_devices": [
+          "SW_CAMPUS_10"
+        ],
+        "confidence": 0.0,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "insufficient",
+        "correct": true,
+        "prooftrace_checks": 40,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-038",
+        "label": "normal",
+        "faulty_device": null,
+        "status": "healthy",
+        "predicted_cause": null,
+        "root_cause_devices": [],
+        "confidence": 0.7,
+        "outcome": "correct",
+        "detected": null,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 13,
+        "prooftrace_verified": true
+      },
+      {
+        "incident": "ORG-7-039",
+        "label": "hardware_failure",
+        "faulty_device": "SW_CAMPUS_7",
+        "status": "diagnosed",
+        "predicted_cause": "hardware_failure",
+        "root_cause_devices": [
+          "SW_CAMPUS_7"
+        ],
+        "confidence": 0.77,
+        "outcome": "correct",
+        "detected": true,
+        "pred": "decided",
+        "correct": true,
+        "prooftrace_checks": 49,
+        "prooftrace_verified": true
+      }
+    ]
+  },
+  "sweep": {
+    "1": {
+      "accuracy": 0.975,
+      "false_diagnosis_rate": 0.0,
+      "abstention_rate": 0.3,
+      "detection_rate": 1.0,
+      "outcomes": {
+        "correct": 39,
+        "hedged": 1
+      },
+      "prooftrace_verified": "40/40"
+    },
+    "2": {
+      "accuracy": 1.0,
+      "false_diagnosis_rate": 0.0,
+      "abstention_rate": 0.325,
+      "detection_rate": 1.0,
+      "outcomes": {
+        "correct": 40
+      },
+      "prooftrace_verified": "40/40"
+    },
+    "3": {
+      "accuracy": 1.0,
+      "false_diagnosis_rate": 0.0,
+      "abstention_rate": 0.325,
+      "detection_rate": 1.0,
+      "outcomes": {
+        "correct": 40
+      },
+      "prooftrace_verified": "40/40"
+    },
+    "4": {
+      "accuracy": 1.0,
+      "false_diagnosis_rate": 0.0,
+      "abstention_rate": 0.325,
+      "detection_rate": 1.0,
+      "outcomes": {
+        "correct": 40
+      },
+      "prooftrace_verified": "40/40"
+    },
+    "5": {
+      "accuracy": 1.0,
+      "false_diagnosis_rate": 0.0,
+      "abstention_rate": 0.325,
+      "detection_rate": 1.0,
+      "outcomes": {
+        "correct": 40
+      },
+      "prooftrace_verified": "40/40"
+    }
+  }
+}
