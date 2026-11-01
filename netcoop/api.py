@@ -216,7 +216,7 @@ ROUTES = {("GET", "/api/catalog"): lambda b: catalog(), ("GET", "/api/benchmarks
 
 
 # ------------------------------------------------------------------------------------ server
-def make_server(port: int = 8000, host: str = "127.0.0.1") -> ThreadingHTTPServer:
+def make_server(port: int = 8000, host: str = "0.0.0.0") -> ThreadingHTTPServer:
     class Handler(BaseHTTPRequestHandler):
         def _send(self, code: int, data: bytes, ctype: str = "application/json") -> None:
             self.send_response(code)
@@ -278,8 +278,8 @@ def start_in_thread() -> tuple[ThreadingHTTPServer, str]:
     return srv, f"http://127.0.0.1:{srv.server_address[1]}"
 
 
-def serve(port: int = 8000) -> None:
-    srv = make_server(port)
+def serve(port: int = 8000, host: str = "0.0.0.0") -> None:
+    srv = make_server(port, host=host)
     ui = "web UI + API" if WEB_DIST.exists() else "API only (build the UI with `npm run build` in web/)"
-    print(f"NetCoop {ui} on http://127.0.0.1:{port}")
+    print(f"NetCoop {ui} on http://{host}:{port}")
     srv.serve_forever()
